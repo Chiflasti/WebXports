@@ -7,7 +7,7 @@ Github: josbernikon
 
 Alejandro Alonso Rodríguez     
 Correo: a.alonsor.2016@alumnos.urjc.es      
-Github: 
+Github: Chiflasti
 
 Daniel Manzano García          
 Correo: d.manzanoga@alumnos.urjc.es         
@@ -19,7 +19,7 @@ WebXports.
 
 **Descripción de la aplicación**
 
-Web para mostrar información sobre los distintos equipos de una liga de eSports.
+Web para mostrar información sobre los distintos equipos de una liga de eSports. De manera pública se podrá ver tanto calenario como resultados como clasificacion como información de los equipos de forma general. Mientras que de forma privada cada usuario podrá hacer seguimiento de equipos favoritos y/o jugadores en concreto, además recibe notificaciones sobre sus equipos favoritos en cuanto resultados noticias, etc.
 
 **Entidades**
 
