@@ -14,8 +14,10 @@ Correo: d.manzanoga@alumnos.urjc.es
 Github:
 
 **Nombre de la apliación** 
+
 WebXports.
 
 **Descripción de la aplicación**
+
 Web para mostrar información sobre los distintos equipos de una liga de eSports.
 
