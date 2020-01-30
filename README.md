@@ -32,6 +32,6 @@ Equipos: se mostrará al usuario los distintos equipos que componen la liga, tod
 Usuario: visitante registrado que tendrá aceso a otras funcionalidades de la página solo accesible para ellos, como por ejemploo seguir a tu equipo favorito y poder reibir notificaciones cuando vayan a jugar un partido.
 
 
-**Servicio interno: **
+**Servicio interno:**
 
 Gestionará el envio de notificaciones a los usuarios registrados para poder realizar un seguimiento de sus equipos favoritos y ver las estadísticas de los partidos.
