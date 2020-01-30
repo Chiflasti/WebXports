@@ -25,10 +25,8 @@ Web para mostrar información sobre los distintos equipos de una liga de eSports
 
 Noticias: se mostrará al usuario las últimas noticias relacionadas con los equipos dela liga o el juego en sí.
 
-Calendario: se mostrará al usuario los partidos de la siguiente jornada y la hora a la que se juegan.
-
-Resultados: se mostrará al usuario los resultado de partidos ya terminados de las anteriores jornadas.
-
-Clasificación: se mostrará al usuario la clasificación de la liga, además aparecerla el número de sus partidos ganados y perdidos y el total de los partidos jugados durante la temporada vigente.
+Jornada: se mostrará al usuario los partidos de la siguiente jornada y la hora a la que se juegan, los resulados de partidos anteriores, la clasificación de la liga y se añadirán links para poder ver los partidos en directo o los partidos ya jugados que han sido resubidos como vídeos. 
 
 Equipos: se mostrará al usuario los distintos equipos que componen la liga, todo lo importante relacionado con los jugadores que componen cada equipo. También se mostrará el nombre del entrenador del equipo y los suplentes si los hubiera. 
+
+Usuario: visitante registrado que tendrá aceso a otras funcionalidades de la página solo accesible para ellos, como por ejemploo seguir a tu equipo favorito y poder reibir notificaciones cuando vayan a jugar un partido.
