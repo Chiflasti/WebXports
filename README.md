@@ -31,6 +31,8 @@ Equipos: se mostrará al usuario los distintos equipos que componen la liga, tod
 
 Usuario: visitante registrado que tendrá aceso a otras funcionalidades de la página solo accesible para ellos, como por ejemploo seguir a tu equipo favorito y poder reibir notificaciones cuando vayan a jugar un partido.
 
+Partido: se mostrarán los 2 equipos que jugarán un partido, así como la hora a la que se jugará y cuando termine se mostrará el resultado final.
+
 
 **Servicio interno:**
 
