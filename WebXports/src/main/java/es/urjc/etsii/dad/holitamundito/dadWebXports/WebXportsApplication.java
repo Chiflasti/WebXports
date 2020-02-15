@@ -1,4 +1,4 @@
-package es.urjc.etsii.dadWebXports;
+package es.urjc.etsii.dadholitamundito;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
