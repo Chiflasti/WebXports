@@ -7,7 +7,7 @@ Github: josbernikon
 
 Alejandro Alonso Rodríguez     
 Correo: a.alonsor.2016@alumnos.urjc.es      
-Github: Chiflasti
+Github: Chiflasti y Jeftkiller
 
 Daniel Manzano García          
 Correo: d.manzanoga@alumnos.urjc.es         
