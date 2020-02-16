@@ -1,4 +1,4 @@
-package es.urjc.etsii.dad.holitamundito;
+package Entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
