@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import Entidades.Equipos;
 import Entidades.Noticia;
 import Repositories.EquiposRespository;
 import Repositories.NoticiaRepository;
@@ -29,7 +30,9 @@ public class NoticiaController {
 	}
 	@PostConstruct
 	public void init() {
-		repository.save(new Noticia("001","Jack Daniels: Quiero que se me mire como a un rival al que unca puedes subestimar ","Entrevista","Jugador",14,02,2020,Movistar Titans));
+		Equipos e1 = new Equipos("Movistar Titans", "Madrid", "Que guay es");
+		repositoryEquipos.save(e1);
+		repository.save(new Noticia("001","Jack Daniels: Quiero que se me mire como a un rival al que unca puedes subestimar ","Entrevista","Jugador",14,02,2020,e1));
 	}
 	
 	@RequestMapping("/")
