@@ -3,7 +3,7 @@
 
 José Ignacio Bermúdez Robles   
 Correo: ji.bermudez.2016@alumnos.urjc.es    
-Github: josbernikon
+Github: josbernikon (Admin and Admin)
 
 Alejandro Alonso Rodríguez     
 Correo: a.alonsor.2016@alumnos.urjc.es      
