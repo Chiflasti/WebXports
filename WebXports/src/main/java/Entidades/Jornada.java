@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 
 
 
@@ -21,8 +23,9 @@ public class Jornada {
 		private String fecha;
 		private int temporada;
 		
-		@OneToMany(mappedBy="jornada")
-		private ArrayList<Partidos> partidos;
+		@ManyToOne
+		@JoinColumn(name="jornada")
+		private ArrayList<Partidos> Partidos;
 
 	public Jornada() {}
 

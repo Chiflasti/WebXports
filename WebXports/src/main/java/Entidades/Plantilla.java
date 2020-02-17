@@ -1,12 +1,12 @@
 package Entidades;
-import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Plantilla {
@@ -18,15 +18,15 @@ public class Plantilla {
 	private String Apellido;
 	private String Posicion;
 	private String Nacionalidad;
-	private String Equipo;
-	@OneToMany(mappedBy="Plantilla")
+	
+	@ManyToOne
 	@JoinColumn(name="Nombre")
-	private ArrayList<Equipos> Equipos;
+	private Equipos Equipo;
 	
 	public Plantilla() {}
 
 	public Plantilla(String nickName, String nombre, String apellido, String posicion, String nacionalidad,
-			String equipo) {
+			Equipos equipo) {
 		super();
 		NickName = nickName;
 		Nombre = nombre;
@@ -76,11 +76,11 @@ public class Plantilla {
 		Nacionalidad = nacionalidad;
 	}
 
-	public String getEquipo() {
+	public Equipos getEquipo() {
 		return Equipo;
 	}
 
-	public void setEquipo(String equipo) {
+	public void setEquipo(Equipos equipo) {
 		Equipo = equipo;
 	}
 

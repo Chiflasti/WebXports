@@ -1,7 +1,5 @@
 package Entidades;
 
-import java.util.ArrayList;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,17 +18,16 @@ public class Noticia {
 	private String categoria2;
 	private int dia;
 	private int mes;
-	private int anio;
-	private String equipo;
+	private int anio;	
 	
-	
-	@OneToMany(mappedBy="Equipos")
+	@OneToMany(mappedBy="Noticia")
 	@JoinColumn(name="Nombre")
-	private ArrayList<Noticia> Noticia;
+	private Equipos equipo;
+
 	
 	public Noticia() {}
 	
-	public Noticia(String id, String nombre, String categoria1, String categoria2, int dia, int mes, int anio, String equipo) {
+	public Noticia(String id, String nombre, String categoria1, String categoria2, int dia, int mes, int anio, Equipos equipo) {
 		id = this.id;
 		nombre = this.nombre;
 		categoria1 = this.categoria1;
@@ -97,11 +94,11 @@ public class Noticia {
 		this.anio = anio;
 	}
 
-	public String getEquipo() {
+	public Equipos getEquipo() {
 		return equipo;
 	}
 
-	public void setEquipo(String equipo) {
+	public void setEquipo(Equipos equipo) {
 		this.equipo = equipo;
 	}
 

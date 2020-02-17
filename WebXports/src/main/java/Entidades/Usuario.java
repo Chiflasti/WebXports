@@ -1,12 +1,11 @@
 package Entidades;
-import java.util.ArrayList;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Usuario {
@@ -19,10 +18,6 @@ public class Usuario {
 	private String apellidos;
 	private String contrasenia;
 	
-	@ManyToMany(mappedBy="Usuario")
-	@JoinColumn(name="Noticia")
-	private ArrayList<Usuario> Usuario;
-
 	public Usuario() {
 		
 	}
@@ -67,7 +62,7 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [nick=" + nick + ", correo=" + correo + ", nombre=" + nombre + ", apellidos=" + apellidos
-				+ ", contrasenia=" + contrasenia + ", Usuario=" + Usuario + "]";
+				+ ", contrasenia=" + contrasenia + "]";
 	}
 	
 	

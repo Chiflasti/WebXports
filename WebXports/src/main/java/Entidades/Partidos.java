@@ -4,7 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+
+import javax.persistence.OneToMany;
 
 @Entity
 public class Partidos {
@@ -16,12 +19,16 @@ public class Partidos {
 
 	private String fecha;
 	
-	@ManyToOne
+	@OneToMany(mappedBy="Partidos")
+	@JoinColumn(name="numJor")
 	private Jornada jornada;
 	
+	@ManyToMany(mappedBy="Partidos")
+	@JoinColumn(name="Nombre")
+	private Equipos equp1;
+	private Equipos equip2;
+	
 	private String hora;
-	private String equp1;
-	private String equip2;
 	private String result;
 	
 
@@ -29,7 +36,7 @@ public class Partidos {
 
 	public Partidos() {}
 
-	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, String equp1, String equip2, String result) {
+	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, Equipos equp1, Equipos equip2, String result) {
 		this.idPartido = idPartido;
 		this.fecha = fecha;
 		this.jornada = jornada;
@@ -73,19 +80,19 @@ public class Partidos {
 		this.hora = hora;
 	}
 
-	public String getEqup1() {
+	public Equipos getEqup1() {
 		return equp1;
 	}
 
-	public void setEqup1(String equp1) {
+	public void setEqup1(Equipos equp1) {
 		this.equp1 = equp1;
 	}
 
-	public String getEquip2() {
+	public Equipos getEquip2() {
 		return equip2;
 	}
 
-	public void setEquip2(String equip2) {
+	public void setEquip2(Equipos equip2) {
 		this.equip2 = equip2;
 	}
 	

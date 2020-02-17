@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -19,12 +21,16 @@ public class Equipos {
 	
 	@OneToMany(mappedBy="Equipos")
 	@JoinColumn(name="Nombre")
-	private ArrayList<Plantilla> Plantilla ;
-	
+	private ArrayList<Plantilla> Plantilla;
+	@ManyToOne
+	@JoinColumn(name="equipo")
+	private ArrayList<Noticia> Noticia;
+	@ManyToMany(mappedBy="Equipos")
+	@JoinColumn(name="equp1")
+	private ArrayList<Partidos> Partidos;
 	public Equipos() {}
 
 	public Equipos(String nombre, String ciudad, String informacion) {
-		super();
 		Nombre = nombre;
 		Ciudad = ciudad;
 		Informacion = informacion;

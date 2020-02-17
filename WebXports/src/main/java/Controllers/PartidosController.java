@@ -35,7 +35,7 @@ public class PartidosController {
 	@PostConstruct
 	public void init() {
 		repositoryJor.save(jor);
-		repositoryPar.save(new Partidos(1,jor,"01/01/2020","16:00","Equipo1","Equipo2","Equipo1"));
+		repositoryPar.save(new Partidos(1,jor,"01/01/2020","16:00",Equipo1,Equipo2,"Equipo1"));
 	}
 	
 	@RequestMapping("/")
