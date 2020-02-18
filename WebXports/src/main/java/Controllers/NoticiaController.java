@@ -16,7 +16,7 @@ import Repositories.EquiposRespository;
 import Repositories.NoticiaRepository;
 
 @RestController
-@RequestMapping("/Noticia")
+//@RequestMapping("/Noticia")
 
 public class NoticiaController {
 

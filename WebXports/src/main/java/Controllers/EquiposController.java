@@ -15,7 +15,7 @@ import Entidades.Equipos;
 import Repositories.EquiposRespository;
 
 @RestController
-@RequestMapping("/Equipos")
+/*@RequestMapping("/Equipos")*/
 public class EquiposController {
 	@Autowired
 	private EquiposRespository repository;

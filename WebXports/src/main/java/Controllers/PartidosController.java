@@ -20,7 +20,7 @@ import Repositories.PartidosRepository;
 
 
 @RestController
-@RequestMapping("/partidos")
+//@RequestMapping("/partidos")
 public class PartidosController {
 	
 	@Autowired

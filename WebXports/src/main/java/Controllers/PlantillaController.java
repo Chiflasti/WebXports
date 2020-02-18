@@ -17,7 +17,7 @@ import Repositories.EquiposRespository;
 import Repositories.PlantillaRepository;
 
 @RestController
-@RequestMapping("/Plantilla")
+//@RequestMapping("/Plantilla")
 
 public class PlantillaController {
 	@Autowired

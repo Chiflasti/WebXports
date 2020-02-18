@@ -26,6 +26,8 @@ public class Partidos {
 	@ManyToMany(mappedBy="Partidos")
 	@JoinColumn(name="Nombre")
 	private Equipos equp1;
+	@ManyToMany(mappedBy="Partidos")
+	@JoinColumn(name="Nombre")
 	private Equipos equip2;
 	
 	private String hora;

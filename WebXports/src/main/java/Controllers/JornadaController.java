@@ -15,7 +15,7 @@ import Entidades.Jornada;
 import Repositories.JornadaRepository;
 
 @RestController
-@RequestMapping("/jornadas")
+//@RequestMapping("/jornadas")
 public class JornadaController {
 	
 	@Autowired

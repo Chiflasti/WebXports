@@ -13,7 +13,7 @@ import Entidades.Usuario;
 import Repositories.UsuarioRepository;
 
 @RestController
-@RequestMapping("/Usuario")
+//@RequestMapping("/Usuario")
 
 public class UsuarioController {
 	
