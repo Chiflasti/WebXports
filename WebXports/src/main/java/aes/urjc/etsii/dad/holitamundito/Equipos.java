@@ -65,6 +65,6 @@ public class Equipos {
 	}
 
 	public void setInformacion(String informacion) {
-		informacion = informacion;
+		this.informacion = informacion;
 	}
 }
