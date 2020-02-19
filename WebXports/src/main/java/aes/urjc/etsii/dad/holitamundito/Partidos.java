@@ -29,11 +29,8 @@ public class Partidos {
 	
 	@ManyToMany
 	//@JoinColumn(name="equp1")
-	private List<Equipos> equipos= new ArrayList<>();
+	private List<Equipos>equipos;
 	
-	/*@ManyToMany
-	//@JoinColumn(name="Nombre")
-	private Equipos equip2;*/
 	
 	private String hora;
 	private String result;
@@ -43,16 +40,19 @@ public class Partidos {
 
 	public Partidos() {}
 
-	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, String result) {//Equipos equip2, String result) {
-	//public Partidos(int idPartido, Jornada jornada, String fecha, String hora,String result) {// Equipos equp1, Equipos equip2, String result) {
+	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, String result) {
 		super();
 		this.idPartido = idPartido;
-		this.fecha = fecha;
 		this.jornada = jornada;
+		this.fecha = fecha;
 		this.hora = hora;
-		//this.equp1 = equp1;
-		//this.equip2 = equip2;
+		equipos = new ArrayList<>();
 		this.result = result;
+	}
+	
+	public void addPartidos(Equipos e1, Equipos e2) {
+		equipos.add(e1);
+		equipos.add(e2);
 	}
 
 	public int getIdPartido() {
@@ -89,15 +89,15 @@ public class Partidos {
 		this.hora = hora;
 	}
 
-	/*public Equipos getEqup1() {
-		return equp1;
+	/*public Equipos getEquip1() {
+		return equip1;
 	}
 
-	public void setEqup1(Equipos equp1) {
-		this.equp1 = equp1;
-	}*/
+	public void setEqup1(Equipos equip1) {
+		this.equip1 = equip1;
+	}
 
-	/*public Equipos getEquip2() {
+	public Equipos getEquip2() {
 		return equip2;
 	}
 
@@ -115,9 +115,9 @@ public class Partidos {
 
 	@Override
 	public String toString() {
-	/*return "Partidos [idPartido=" + idPartido + ", fecha=" + fecha + ", jornada=" + jornada + ", hora=" + hora
-			+ ", equp1=" + equp1 + ", equip2=" + equip2 + "]";*/
-		return "Partidos [idPartido=" + idPartido + ", fecha=" + fecha + ", hora=" + hora+"]";
+	return "Partidos [idPartido=" + idPartido + ", fecha=" + fecha + ", jornada=" + jornada + ", hora=" + hora
+			+ "]";
+
 }
 
 }

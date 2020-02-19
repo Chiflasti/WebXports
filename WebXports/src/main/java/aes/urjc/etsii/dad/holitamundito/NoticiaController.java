@@ -16,16 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class NoticiaController {
 
 	
-	/*@Autowired
+	@Autowired
 	private EquiposRespository repositoryEquipos;
+	@Autowired
+	private NoticiaRepository repositorynot;
 	
-	@PostConstruct
-	public void init() {
-		Equipos e1 = new Equipos("Movistar Titans", "Madrid", "Que guay es");
-		repositoryEquipos.save(e1);
-		Noticia n1 = new Noticia("001","Jack Daniels: Quiero que se me mire como a un rival al que unca puedes subestimar ","Entrevista","Jugador",14,02,2020,e1);
-		repository.save(n1);
-	}*/
+	
 	
 	
 	

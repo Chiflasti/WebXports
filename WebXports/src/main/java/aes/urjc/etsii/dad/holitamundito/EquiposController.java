@@ -16,12 +16,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class EquiposController {
-	/*@PostConstruct
+	
+	/*@Autowired
+	private EquiposRespository repositoryeq;
+	
+	@PostConstruct
 	public void init() {
-		repository.save(new Equipos("Team Cheese", "Madrid","Equipo de una universidad de Madrid que ha participado en el torneo desde su fundacion"));
-		repository.save(new Equipos("Movistar Titans","Malaga","Equipo de una universidad de Malaga, acaban de subir de division"));
-		repository.save(new Equipos("eMonos","Valencia", "Equipo de una universidad de Valencia, acaba de bajar de division"));
-		repository.save(new Equipos("Comando Sevilla","Sevilla","Equipo de una universidad de Sevilla, son los que mas veces han ganado la liga"));
+		Equipos Movistar_Titans = new Equipos("Movistar Titans", "Malaga", "Equipo de una universidad de Malaga, acaban de subir de division");
+		repositoryeq.save(Movistar_Titans);
+		Equipos Comando_Sevilla = new Equipos("Comando Sevilla", "Sevilla", "Equipo de una universidad de Sevilla, son los que mas veces han ganado la liga");
+		repositoryeq.save(Comando_Sevilla);
+		Equipos eMonos = new Equipos("eMonos", "Valencia", "Equipo de una universidad de Valencia, acaba de bajar de division");
+		repositoryeq.save(eMonos);
+		Equipos Team_Cheese = new Equipos("Team Chesee", "Madrid", "Equipo de una universidad de Madrid que ha participado en el torneo desde su fundacion");
+		repositoryeq.save(Team_Cheese);
 	}*/
 	
 }

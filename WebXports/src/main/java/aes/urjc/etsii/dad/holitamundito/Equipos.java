@@ -49,7 +49,7 @@ public class Equipos {
 	}
 
 	public void setNombre(String nombre) {
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 
 	public String getCiudad() {
@@ -57,7 +57,7 @@ public class Equipos {
 	}
 
 	public void setCiudad(String ciudad) {
-		ciudad = ciudad;
+		this.ciudad = ciudad;
 	}
 
 	public String getInformacion() {
