@@ -30,15 +30,14 @@ public class Noticia {
 	public Noticia() {}
 	
 	public Noticia(int id, String nombre, String categoria1, String categoria2, int dia, int mes, int anio, Equipos equipo) {
-		super();
-		id = this.id;
-		nombre = this.nombre;
-		categoria1 = this.categoria1;
-		categoria2 = this.categoria2;
-		dia = this.dia;
-		mes = this.mes;
-		anio = this.anio;
-		equipo = this.equipo;
+		this.id = id;
+		this.nombre = nombre;
+		this.categoria1 = categoria1;
+		this.categoria2 = categoria2;
+		this.dia = dia;
+		this.mes = mes;
+		this.anio = anio;
+		this.equipo = equipo;
 	}
 
 	public int getId() {

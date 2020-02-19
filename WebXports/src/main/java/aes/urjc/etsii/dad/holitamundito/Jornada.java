@@ -21,24 +21,24 @@ public class Jornada {
 	
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
-		private int numJor;
+		private int idJor;
 		
-
+		private int numJor;
 		private String fecha;
 		private int temporada;
 		
-		@OneToMany(cascade=CascadeType.ALL)
+		@OneToMany(mappedBy = "jornada")
 		//@JoinColumn(name="jornada")
-		private List<Partidos> Partidos = new ArrayList<>();
+		private List<Partidos> Partidos;
 
 	public Jornada() {}
 
-	public Jornada(int numJ, String fecha, int temporada) {
-		super();
-		numJ = this.numJor;
-		fecha = this.fecha;
-		temporada = this.temporada;
-		//Partidos = new ArrayList<>();
+	public Jornada(int numJor, String fecha, int temporada) {
+		
+		this.numJor = numJor;
+		this.fecha = fecha;
+		this.temporada = temporada;
+		Partidos = new ArrayList<>();
 	}
 	
 	public void addPartido(Partidos p) {

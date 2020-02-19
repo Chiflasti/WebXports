@@ -14,17 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/Usuario")
 @Controller
 public class UsuarioController {
-	
+	/*
 	@Autowired 
-	private UsuarioRepository repository;
+	private UsuarioRepository repositoryUs;
 	
 	
 	@PostConstruct
 	public void init() {
-		repository.save(new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123"));
-		repository.save(new Usuario("mario","mario@gmail.com","Mario","Piloto","123"));
+		Usuario u1 = new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123");
+		repositoryUs.save(u1);
+		Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
+		repositoryUs.save(u2);
 	}
-	
+	*/
 	
 	
 }

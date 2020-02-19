@@ -26,6 +26,8 @@ public class PlantillaController {
 	private PartidosRepository repositorypar;
 	@Autowired
 	private JornadaRepository repositoryjor;
+	@Autowired 
+	private UsuarioRepository repositoryUs;
 	
 	
 	@PostConstruct
@@ -91,9 +93,19 @@ public class PlantillaController {
 		
 		Jornada j1 = new Jornada(1,"01/01/2020",1);
 		repositoryjor.save(j1);
-		
 		Partidos p1 = new Partidos(1, j1, "01/01/2020", "18:50", "Comando_Sevilla");
+	
 		repositorypar.save(p1);
+		
+		repositoryjor.save(j1);
+		
+		
+		
+		
+		Usuario u1 = new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123");
+		repositoryUs.save(u1);
+		Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
+		repositoryUs.save(u2);
 		
 	}
 }

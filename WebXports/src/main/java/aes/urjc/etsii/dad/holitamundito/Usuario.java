@@ -25,12 +25,11 @@ public class Usuario {
 	}
 	
 	public Usuario(String nick, String correo, String nombre, String apellidos,String contrasenia) {
-		super();
-		nick = this.nick;
-		correo = this.correo;
-		nombre = this.nombre;
-		apellidos = this.apellidos;
-		contrasenia = this.contrasenia;
+		this.nick = nick;
+		this.correo = correo;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.contrasenia = contrasenia;
 	}
 	
 	public String getNick() {

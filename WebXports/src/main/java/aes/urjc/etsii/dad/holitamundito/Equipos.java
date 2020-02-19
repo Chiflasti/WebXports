@@ -20,54 +20,51 @@ public class Equipos {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idEq;
 	
-	private String Nombre;
-	private String Ciudad;
-	private String Informacion;
+	private String nombre;
+	private String ciudad;
+	private String informacion;
 	
 	@OneToMany
 	//@JoinColumn(name="Nombre")
-	private List<Plantilla> Plantilla = new ArrayList<>();
+	private List<Plantilla> Plantilla;
 	@OneToMany
 	//@JoinColumn(name="equipo")
-	private List<Noticia> Noticia= new ArrayList<>();
+	private List<Noticia> Noticia;
 	@ManyToMany(cascade=CascadeType.ALL)
 	//@JoinColumn(name="equp1")
-	private List<Partidos> Partidos= new ArrayList<>();
+	private List<Partidos> Partidos;
 	
 	public Equipos() {}
 
 	public Equipos(String nombre, String ciudad, String informacion) {
-		super();
-		Nombre = nombre;
-		Ciudad = ciudad;
-		Informacion = informacion;
-		//Plantilla = new ArrayList<>();
-		//Noticia = new ArrayList<>();
-		//Partidos = new ArrayList<>();
+		
+		this.nombre = nombre;
+		this.ciudad = ciudad;
+		this.informacion = informacion;
 		
 	}
 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		nombre = nombre;
 	}
 
 	public String getCiudad() {
-		return Ciudad;
+		return ciudad;
 	}
 
 	public void setCiudad(String ciudad) {
-		Ciudad = ciudad;
+		ciudad = ciudad;
 	}
 
 	public String getInformacion() {
-		return Informacion;
+		return informacion;
 	}
 
 	public void setInformacion(String informacion) {
-		Informacion = informacion;
+		informacion = informacion;
 	}
 }
