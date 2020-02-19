@@ -29,7 +29,7 @@ public class Partidos {
 	
 	@ManyToMany
 	//@JoinColumn(name="equp1")
-	private List<Equipos> equipos= new ArrayList<>();
+	private List<Equipos> equipos;
 	
 	/*@ManyToMany
 	//@JoinColumn(name="Nombre")
@@ -50,9 +50,14 @@ public class Partidos {
 		this.fecha = fecha;
 		this.jornada = jornada;
 		this.hora = hora;
+		equipos = new ArrayList<>();
 		//this.equp1 = equp1;
 		//this.equip2 = equip2;
 		this.result = result;
+	}
+	public void addPartidos(Equipos e1, Equipos e2) {
+		equipos.add(e1);
+		equipos.add(e2);
 	}
 
 	public int getIdPartido() {

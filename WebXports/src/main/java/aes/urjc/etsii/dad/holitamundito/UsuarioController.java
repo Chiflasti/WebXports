@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/Usuario")
 @Controller
 public class UsuarioController {
-	/*
+	
 	@Autowired 
 	private UsuarioRepository repositoryUs;
 	
@@ -26,7 +26,7 @@ public class UsuarioController {
 		Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
 		repositoryUs.save(u2);
 	}
-	*/
+	
 	
 	
 }
