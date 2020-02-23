@@ -5,12 +5,15 @@
 <body>
 	<p align="center"><font color="#001000" size="40" face="Arial"> PARTIDOS</font> </p>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<form action="Partidos.html" method="post">
+	<form action="Partidos" method="post">
 	
-	<h4 class="color-black"><b>JORNADA 1 <br/></b><li class="color-black">Movistar Titans 1-0 Comando Sevilla<li class="color-black">eMonos 0-1 Team Cheese</lu></li></h4>
-	<h4 class="color-black"><b>JORNADA 2<br/></b><li class="color-black">Comando Sevilla 1-0 eMonos<li class="color-black">Team Cheese 0-1 Movistar Titans</lu></li></h4>						
-	<p align="center"><br><a href="CrearPartido.html" class="btn btn-success">Gestión de partidos</a><br>
-	<p align="center"><br><a href="index.html" class="btn btn-success">Volver</a><br></p>
+	{{#partidos}}
+	<p>{{idPartido}} -> {{fecha}} <br> {{hora}} </p>
+	{{/partidos}}  
+					
+	<p align="center"><br><a href="CrearPartidos.html" class="btn btn-success">Crear partidos</a><br>
+	<p align="center"><br><a href="EliminarPartidos.html" class="btn btn-success">Eliminar partidos</a><br>
+    <p align="center"><br><a href="/" class="btn btn-success">Volver</a><br></p>
 	</form>
 </body>
 </html>

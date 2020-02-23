@@ -1,35 +1,54 @@
 package aes.urjc.etsii.dad.holitamundito;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
 
-@RestController
-//@RequestMapping("/partidos")
+
+
+@Controller
 public class PartidosController {
+
+	@Autowired
+	private PartidosRepository repositorypar;
 	
 	
+	@GetMapping("/Partidos")
+	public String Noticia(Model model) {
+		model.addAttribute("partidos", repositorypar.findAll());
+		return "Partidos";
+	}
 	
-	/*@PostConstruct
-	public void init() {
-		Jornada jor = new Jornada(1,"01/01/2020",1);
-		repositoryJor.save(jor);
-		Equipos e1 = new Equipos("Movistar Titans", "Madrid", "Que guay es");
-		repositoryeq.save(e1);
-		Equipos e2 = new Equipos("Chesee", "Madrid", "Que guay es");
-		repositoryeq.save(e2);
-		
-	}*/
+	@PostMapping("/CrearPartidos")
+	public String crearPlantilla(Model model, Partidos p) {
+		repositorypar.save(p);
+		return "GuardadoPartidos";
+	}
 	
-	
+	@PostMapping(value = "/EliminarPartidos")
+	public String eliminarPlantilla(Model model, @RequestParam long idPartido){
+		Optional<Partidos> partidos = repositorypar.findById(idPartido);
+
+		if(partidos.isPresent()) {
+			repositorypar.delete(partidos.get());
+			return "PartidosEliminada";
+		}else {
+			return "PartidosNoExiste";
+		}
+
+	}
 
 }
 

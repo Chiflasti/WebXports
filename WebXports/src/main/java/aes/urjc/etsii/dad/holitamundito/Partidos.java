@@ -18,7 +18,7 @@ public class Partidos {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idPartido;
+	private long idPartido;
 	
 
 	private String fecha;
@@ -60,13 +60,21 @@ public class Partidos {
 		equipos.add(e2);
 	}
 
-	public int getIdPartido() {
-		return idPartido;
+	
+	public List<Equipos> getEquipos() {
+		return equipos;
 	}
 
+	public void setEquipos(List<Equipos> equipos) {
+		this.equipos = equipos;
+	}
+
+	public long getIdPartido() {
+		return idPartido;
+	}
 	
 
-	public void setIdPartido(int idPartido) {
+	public void setIdPartido(long idPartido) {
 		this.idPartido = idPartido;
 	}
 

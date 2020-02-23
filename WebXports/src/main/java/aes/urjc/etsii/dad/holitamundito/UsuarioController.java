@@ -1,5 +1,6 @@
 package aes.urjc.etsii.dad.holitamundito;
 import java.util.ArrayList;
+import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
@@ -7,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 //@RestController
 //@RequestMapping("/Usuario")
@@ -26,6 +29,33 @@ public class UsuarioController {
 		Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
 		repositoryUs.save(u2);
 	}
+	
+	@GetMapping("/Usuario")
+	public String Noticia(Model model) {
+		model.addAttribute("usuario", repositoryUs.findAll());
+		return "Usuario";
+	}
+	
+	@PostMapping("/CrearUsuario")
+	public String crearPlantilla(Model model, Usuario u) {
+		repositoryUs.save(u);
+		return "GuardadoUsuario";
+	}
+	
+	@PostMapping(value = "/EliminarUsuario")
+	public String eliminarPlantilla(Model model, @RequestParam long idUs){
+		Optional<Usuario> usuario = repositoryUs.findById(idUs);
+
+		if(usuario.isPresent()) {
+			repositoryUs.delete(usuario.get());
+			return "UsuarioEliminado";
+		}else {
+			return "UsuarioNoExiste";
+		}
+
+	}
+	
+	
 	
 	
 	

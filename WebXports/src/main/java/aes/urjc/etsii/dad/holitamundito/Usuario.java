@@ -12,7 +12,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idUs;
+	private long idUs;
 	
 	private String nick;
 	private String correo;
@@ -32,6 +32,14 @@ public class Usuario {
 		this.contrasenia = contrasenia;
 	}
 	
+	public long getIdUs() {
+		return idUs;
+	}
+
+	public void setIdUs(int idUs) {
+		this.idUs = idUs;
+	}
+
 	public String getNick() {
 		return nick;
 	}

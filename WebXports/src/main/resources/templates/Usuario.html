@@ -5,11 +5,15 @@
 <body>
 	<p align="center"><font color="#001000" size="40" face="Arial"> USUARIO</font> </p>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<form action="Usuaio.html" method="post">
+	<form action="Usuaio" method="post">
 	
-	<h4 class="color-black"><b>USUARIO 1 <br/></b><li class="color-black">Nick:Johnny<li class="color-black">Correo: pepitoperez@gmail.com<li class="color-black">Nombre:Pepito<li class="color-black">Apellidos: Perez Perez</lu></li></h4>				
+	{{#usuario}}
+	<p>{{idUs}} -> {{nick}} <br> {{correo}} {{nombre}} {{apellidos}}</p>
+	{{/usuario}}  
+	
 	<p align="center"><br><a href="CrearUsuario.html" class="btn btn-success">Gestión de usuarios</a><br>
-	<p align="center"><br><a href="index.html" class="btn btn-success">Volver</a><br></p>
+	<p align="center"><br><a href="EliminarUsuario.html" class="btn btn-success">Eliminar usuario</a><br>
+    <p align="center"><br><a href="/" class="btn btn-success">Volver</a><br></p>
 	</form>
 </body>
 </html>
