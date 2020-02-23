@@ -13,7 +13,7 @@ public class Plantilla {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idPl;
+	private long idPl;
 	
 	private String NickName;
 	private String Nombre;
@@ -36,6 +36,16 @@ public class Plantilla {
 		Posicion = posicion;
 		Nacionalidad = nacionalidad;
 		Equipo = equipo;
+	}
+
+	
+	
+	public long getIdPl() {
+		return idPl;
+	}
+
+	public void setIdPl(long idPl) {
+		this.idPl = idPl;
 	}
 
 	public String getNickName() {

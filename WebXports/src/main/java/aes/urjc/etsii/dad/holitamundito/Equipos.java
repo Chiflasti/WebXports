@@ -18,7 +18,7 @@ public class Equipos {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idEq;
+	private long idEq;
 	
 	private String nombre;
 	private String ciudad;
@@ -42,6 +42,16 @@ public class Equipos {
 		this.ciudad = ciudad;
 		this.informacion = informacion;
 		
+	}
+
+	
+	
+	public long getIdEq() {
+		return idEq;
+	}
+
+	public void setIdEq(long idEq) {
+		this.idEq = idEq;
 	}
 
 	public String getNombre() {

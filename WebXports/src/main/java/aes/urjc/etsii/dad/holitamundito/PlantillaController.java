@@ -1,6 +1,7 @@
 package aes.urjc.etsii.dad.holitamundito;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
@@ -11,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -102,6 +104,31 @@ public class PlantillaController {
 		p1.addPartidos(Comando_Sevilla, eMonos);
 		repositorypar.save(p1);
 		
+	}
+	
+	@GetMapping("/Plantillas")
+	public String Noticia(Model model) {
+		model.addAttribute("plantillas", repository.findAll());
+		return "Plantillas";
+	}
+	
+	@PostMapping("/CrearPlantilla")
+	public String crearPlantilla(Model model, Plantilla p) {
+		repository.save(p);
+		return "GuardadoPlantilla";
+	}
+	
+	@PostMapping(value = "/EliminarPlantilla")
+	public String eliminarPlantilla(Model model, @RequestParam long idPl){
+		Optional<Plantilla> plantilla = repository.findById(idPl);
+
+		if(plantilla.isPresent()) {
+			repository.delete(plantilla.get());
+			return "PlantillaEliminada";
+		}else {
+			return "PlantillaNoExiste";
+		}
+
 	}
 	
 	
