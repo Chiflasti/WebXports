@@ -13,14 +13,14 @@ public class Noticia {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private long id;
 	
 	private String nombre;
 	private String categoria1;
 	private String categoria2;
-	private int dia;
-	private int mes;
-	private int anio;	
+	private String dia;
+	private String mes;
+	private String anio;	
 	
 	@ManyToOne
 	//@JoinColumn(name="Nombre")
@@ -29,7 +29,7 @@ public class Noticia {
 	
 	public Noticia() {}
 	
-	public Noticia(int id, String nombre, String categoria1, String categoria2, int dia, int mes, int anio, Equipos equipo) {
+	public Noticia(int id, String nombre, String categoria1, String categoria2, String  dia, String  mes, String  anio, Equipos equipo) {
 		this.id = id;
 		this.nombre = nombre;
 		this.categoria1 = categoria1;
@@ -40,11 +40,11 @@ public class Noticia {
 		this.equipo = equipo;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -72,27 +72,27 @@ public class Noticia {
 		this.categoria2 = categoria2;
 	}
 
-	public int getDia() {
+	public String getDia() {
 		return dia;
 	}
 
-	public void setDia(int dia) {
+	public void setDia(String dia) {
 		this.dia = dia;
 	}
 
-	public int getMes() {
+	public String getMes() {
 		return mes;
 	}
 
-	public void setMes(int mes) {
+	public void setMes(String mes) {
 		this.mes = mes;
 	}
 
-	public int getAnio() {
+	public String getAnio() {
 		return anio;
 	}
 
-	public void setAnio(int anio) {
+	public void setAnio(String anio) {
 		this.anio = anio;
 	}
 

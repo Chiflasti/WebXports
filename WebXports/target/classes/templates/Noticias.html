@@ -5,14 +5,15 @@
 <body>
     <p align="center"><font color="#001000" size="40" face="Arial"> NOTICIAS</font> </p>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <form action="Noticia.html" method="post">
+   
 
    	{{#noticia}}
-	<p>{{nombre}} <br>{{categoria1}} {{dia}}/{{mes}}/{{anio}}</p>
+	<p>{{id}} -> {{nombre}} <br>{{categoria1}} {{dia}}/{{mes}}/{{anio}}</p>
 	{{/noticia}}  
 	
-    <p align="center"><br><a href="CrearNoticia.html" class="btn btn-success">Gestión de noticias</a><br>
-    <p align="center"><br><a href="index.html" class="btn btn-success">Volver</a><br></p>
+    <p align="center"><br><a href="/CrearNoticia.html" class="btn btn-success">Crear noticia</a><br>
+    <p align="center"><br><a href="/EliminarNoticia.html" class="btn btn-success">Eliminar noticia</a><br>
+    <p align="center"><br><a href="/" class="btn btn-success">Volver</a><br></p>
     </form>
 </body>
 </html>

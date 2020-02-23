@@ -30,8 +30,7 @@ public class PlantillaController {
 	private PartidosRepository repositorypar;
 	@Autowired
 	private JornadaRepository repositoryjor;
-	@Autowired 
-	private UsuarioRepository repositoryUs;
+	
 	
 	
 	@PostConstruct
@@ -92,9 +91,9 @@ public class PlantillaController {
 		repository.save(Apocalipsis);
 		repository.save(Genesis);
 		
-		Noticia n1 = new Noticia(001,"Jack Daniels: Quiero que se me mire como a un rival al que unca puedes subestimar ","Entrevista","Jugador",14,02,2020,Comando_Sevilla);
+		Noticia n1 = new Noticia(001,"Jack Daniels: Quiero que se me mire como a un rival al que unca puedes subestimar ","Entrevista","Jugador","14","02","2020",Comando_Sevilla);
 		repositorynot.save(n1);
-		Noticia n2 = new Noticia(002,"ElHierbas: Eso de lo que se me acusa no es cierto, no uso chetos","Declaraciones","Jugador",30,02,2020,Movistar_Titans);
+		Noticia n2 = new Noticia(002,"ElHierbas: Eso de lo que se me acusa no es cierto, no uso chetos","Declaraciones","Jugador","30","02","2020",Movistar_Titans);
 		repositorynot.save(n2);
 		
 		Jornada j1 = new Jornada(1,"01/01/2020",1);
@@ -105,10 +104,6 @@ public class PlantillaController {
 		
 	}
 	
-	@GetMapping("/Noticias.html")
-	public String Noticia(Model model) {
-		model.addAttribute("noticia", repositorynot.findAll());
-		return "Noticias";
-	}
+	
 	
 }
