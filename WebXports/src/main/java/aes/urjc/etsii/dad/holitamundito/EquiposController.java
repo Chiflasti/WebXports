@@ -40,8 +40,12 @@ public class EquiposController {
 		Optional<Equipos> equipos = repositoryeq.findById(idEq);
 
 		if(equipos.isPresent()) {
+			if(idEq <= 4) {
+				return "CascadeNo";
+			}else {
 			repositoryeq.delete(equipos.get());
 			return "EquipoEliminado";
+			}
 		}else {
 			return "EquipoNoExiste";
 		}

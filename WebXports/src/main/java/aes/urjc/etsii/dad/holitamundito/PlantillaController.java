@@ -46,33 +46,33 @@ public class PlantillaController {
 		Equipos Team_Cheese = new Equipos("Team Chesee", "Madrid", "Equipo de una universidad de Madrid que ha participado en el torneo desde su fundacion");
 		repositoryeq.save(Team_Cheese);
 		
-		Plantilla The_Jungle_One = new Plantilla("The Jungle One","Aitor","Tilla","Jungla","Espanola",Team_Cheese);
-		Plantilla The_Mid_One = new Plantilla("The Mid One","Francisco","Jones","Mid","Americana",Team_Cheese);
-		Plantilla The_Top_One = new Plantilla("The Top One","Alberto","Mate","Top","Espanola",Team_Cheese);
-		Plantilla The_ADC_One = new Plantilla("The ADC One","Elena","Nito","ADC","Espanola",Team_Cheese);
-		Plantilla The_Support_One = new Plantilla("The Support One","Lola","Mento","Support","Espanola",Team_Cheese);
+		Plantilla The_Jungle_One = new Plantilla("The Jungle One","Aitor","Tilla","Jungla","Espanola",Team_Cheese, "Team_Cheese");
+		Plantilla The_Mid_One = new Plantilla("The Mid One","Francisco","Jones","Mid","Americana",Team_Cheese, "Team_Cheese");
+		Plantilla The_Top_One = new Plantilla("The Top One","Alberto","Mate","Top","Espanola",Team_Cheese, "Team_Cheese");
+		Plantilla The_ADC_One = new Plantilla("The ADC One","Elena","Nito","ADC","Espanola",Team_Cheese, "Team_Cheese");
+		Plantilla The_Support_One = new Plantilla("The Support One","Lola","Mento","Support","Espanola",Team_Cheese, "Team_Cheese");
 		repository.save(The_Jungle_One);//team cheese
 		repository.save(The_Mid_One);
 		repository.save(The_Top_One);
 		repository.save(The_ADC_One);
 		repository.save(The_Support_One);
 		
-		Plantilla Cacahuate = new Plantilla("Cacahuate","Jack","Daniels","Jungla","Escocesa",Movistar_Titans);
-		Plantilla Vesper = new Plantilla("Vesper","Grey","Svedka","Mid","Rusa",Movistar_Titans);
-		Plantilla AppleJack = new Plantilla("AppleJack","Ricardo","Malibu","Top","Americana",Movistar_Titans);
-		Plantilla Kalimoxo = new Plantilla("Kalimoxo","Roberto","Mondavi","ADC","Espanola",Movistar_Titans);
-		Plantilla MaiTai = new Plantilla("MaiTai","Edmundo","Dantes","Support","Espanola",Movistar_Titans);
+		Plantilla Cacahuate = new Plantilla("Cacahuate","Jack","Daniels","Jungla","Escocesa",Movistar_Titans, "Movistar_Titans");
+		Plantilla Vesper = new Plantilla("Vesper","Grey","Svedka","Mid","Rusa",Movistar_Titans, "Movistar_Titans");
+		Plantilla AppleJack = new Plantilla("AppleJack","Ricardo","Malibu","Top","Americana",Movistar_Titans, "Movistar_Titans");
+		Plantilla Kalimoxo = new Plantilla("Kalimoxo","Roberto","Mondavi","ADC","Espanola",Movistar_Titans, "Movistar_Titans");
+		Plantilla MaiTai = new Plantilla("MaiTai","Edmundo","Dantes","Support","Espanola",Movistar_Titans, "Movistar_Titans");
 		repository.save(Cacahuate);//Movistar titans
 		repository.save(Vesper);
 		repository.save(AppleJack);
 		repository.save(Kalimoxo);
 		repository.save(MaiTai);
 		
-		Plantilla LardLard = new Plantilla("LardLard","Igor","Dito","Jungla","Rusa",eMonos);
-		Plantilla ElHierbas = new Plantilla("ElHierbas","Alejandro","Dago","Mid","Espanola",eMonos);
-		Plantilla Viper = new Plantilla("Viper","Ana","Konda","Top","Rumana",eMonos);
-		Plantilla The_Queen = new Plantilla("The Queen","Federico","Mercurio","ADC","Espanola",eMonos);
-		Plantilla Bendernator = new Plantilla("Bendernator","Adrian","Droide","Support","Espanol",eMonos);
+		Plantilla LardLard = new Plantilla("LardLard","Igor","Dito","Jungla","Rusa",eMonos, "eMonos");
+		Plantilla ElHierbas = new Plantilla("ElHierbas","Alejandro","Dago","Mid","Espanola",eMonos,"eMonos");
+		Plantilla Viper = new Plantilla("Viper","Ana","Konda","Top","Rumana",eMonos,"eMonos");
+		Plantilla The_Queen = new Plantilla("The Queen","Federico","Mercurio","ADC","Espanola",eMonos,"eMonos");
+		Plantilla Bendernator = new Plantilla("Bendernator","Adrian","Droide","Support","Espanol",eMonos,"eMonos");
 	
 		
 		repository.save(LardLard);//eMonos
@@ -81,11 +81,11 @@ public class PlantillaController {
 		repository.save(The_Queen);
 		repository.save(Bendernator);
 		
-		Plantilla Levitica = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla);
-		Plantilla Trinidad = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla);
-		Plantilla Exodus = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla);
-		Plantilla Apocalipsis = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla);
-		Plantilla Genesis = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla);
+		Plantilla Levitica = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla, "Comando_Sevilla");
+		Plantilla Trinidad = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla, "Comando_Sevilla");
+		Plantilla Exodus = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla, "Comando_Sevilla");
+		Plantilla Apocalipsis = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla, "Comando_Sevilla");
+		Plantilla Genesis = new Plantilla("Levitica","Elsa","Kapunta","Jungla","Israeli",Comando_Sevilla, "Comando_Sevilla");
 		
 		repository.save(Levitica);///Comando Sevilla
 		repository.save(Trinidad);
@@ -100,7 +100,7 @@ public class PlantillaController {
 		
 		Jornada j1 = new Jornada(1,"01/01/2020",1);
 		repositoryjor.save(j1);
-		Partidos p1 = new Partidos(1, j1, "01/01/2020", "18:50", "Comando_Sevilla");
+		Partidos p1 = new Partidos(1, j1, "01/01/2020", "18:50", "Comando_Sevilla", "eMonos", "0-1");
 		p1.addPartidos(Comando_Sevilla, eMonos);
 		repositorypar.save(p1);
 		

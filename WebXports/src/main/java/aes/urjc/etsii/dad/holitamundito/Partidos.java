@@ -22,6 +22,8 @@ public class Partidos {
 	
 
 	private String fecha;
+	private String equip1;
+	private String equip2;
 	
 	@ManyToOne
 	//@JoinColumn(name="numJor")
@@ -43,7 +45,7 @@ public class Partidos {
 
 	public Partidos() {}
 
-	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, String result) {//Equipos equip2, String result) {
+	public Partidos(int idPartido, Jornada jornada, String fecha, String hora, String equip1, String equip2, String result) {//Equipos equip2, String result) {
 	//public Partidos(int idPartido, Jornada jornada, String fecha, String hora,String result) {// Equipos equp1, Equipos equip2, String result) {
 		super();
 		this.idPartido = idPartido;
@@ -51,8 +53,8 @@ public class Partidos {
 		this.jornada = jornada;
 		this.hora = hora;
 		equipos = new ArrayList<>();
-		//this.equp1 = equp1;
-		//this.equip2 = equip2;
+		this.equip1 = equip1;
+		this.equip2 = equip2;
 		this.result = result;
 	}
 	public void addPartidos(Equipos e1, Equipos e2) {
@@ -61,6 +63,22 @@ public class Partidos {
 	}
 
 	
+	public String getEquip1() {
+		return equip1;
+	}
+
+	public void setEquip1(String equip1) {
+		this.equip1 = equip1;
+	}
+
+	public String getEquip2() {
+		return equip2;
+	}
+
+	public void setEquip2(String equip2) {
+		this.equip2 = equip2;
+	}
+
 	public List<Equipos> getEquipos() {
 		return equipos;
 	}

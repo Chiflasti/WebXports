@@ -20,6 +20,7 @@ public class Plantilla {
 	private String Apellido;
 	private String Posicion;
 	private String Nacionalidad;
+	private String Equip;
 	
 	@ManyToOne
 	//@JoinColumn(name="Nombre")
@@ -28,7 +29,7 @@ public class Plantilla {
 	public Plantilla() {}
 
 	public Plantilla(String nickName, String nombre, String apellido, String posicion, String nacionalidad,
-			Equipos equipo) {
+			Equipos equipo, String equip) {
 		super();
 		NickName = nickName;
 		Nombre = nombre;
@@ -36,10 +37,19 @@ public class Plantilla {
 		Posicion = posicion;
 		Nacionalidad = nacionalidad;
 		Equipo = equipo;
+		Equip = equip; 
 	}
 
 	
 	
+	public String getEquip() {
+		return Equip;
+	}
+
+	public void setEquip(String equip) {
+		Equip = equip;
+	}
+
 	public long getIdPl() {
 		return idPl;
 	}
