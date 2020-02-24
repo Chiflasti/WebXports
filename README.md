@@ -41,50 +41,106 @@ Gestionará el envio de notificaciones a los usuarios registrados para poder rea
 
 **Capturas de pantalla**
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20principal.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/index.JPG)
 
-Página principal de la aplicación, desde ella se puede ir a otras 5 páginas distintas que cuentan con información que pueda interesar al usuario.
+Página principal de la aplicación: desde ella se puede ir a otras 5 páginas distintas que cuentan con información que pueda interesar al usuario.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20Noticias.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/Noticias.JPG)
 
 Página de noticias de la aplicación: en esta página aparecerán las últimas noticias relacionadas con la liga que hemos creado.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20Equipos.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/Equipos.JPG)
 
 Página de equipos: en esta página aparecerán los distintos equipos que componen la liga además de un poco de información de cada uno de ellos.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20Plantilla.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/Plantillas.JPG)
 
 Página de plantilla: en esta página aparecerán los componentes de cada uno de los equipos, tanto su nickname como la posición en la que juegan dentro del equipo.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20Partidos.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/Partidos.JPG)
 
 Página de los partidos: en esta página aparecerán tanto los partidos que se tienen que jugar con la fecha y el número de jornada, como los partidos que ya se han jugado con su resultado.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Pagina%20Usuario.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/Usuario.JPG)
 
 Página de usuario: en esta página aparecerán los datos del usuario que ha iniciado sesión. Aparecerán datos como su nick, correo, su nombre y apellidos.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Gestor%20de%20Noticias.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/CrearNoticia.JPG)
 
-Página de gestión de noticias: en está página se podrán crear noticias y también se podrán eliminar.
+Página de creación de noticias: en está página se podrán crear noticias.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Gestor%20de%20Equipos.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/CrearEquipo.JPG)
 
-Página de gestión de equipos: en está página se podrán crear equipos y también se podrán eliminar.
+Página de creación de equipos: en está página se podrán crear equipos.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Gestor%20de%20Plantilla.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/CrearPlantilla.JPG)
 
-Página de gestión de plantilla: en está página se podrán crear jugadores para una plantilla y también se podrán eliminar.
+Página de creación de plantilla: en está página se podrán crear jugadores para una plantilla.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Gestor%20de%20Partidos.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/CrearPartidos.JPG)
 
-Página de gestión de partidos: en está página se podrán crear partidos y también se podrán eliminar.
+Página de creación de partidos: en está página se podrán crear partidos.
 
-![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Gestor%20Usuario.png)
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/CrearUsuario.JPG)
 
-Página de gestión de usuarios: en está página se podrán crear usuarios y también se podrán eliminar.
+Página de creación de usuarios: en está página se podrán crear usuarios.
 
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EliminarNoticia.JPG)
 
+Página para eliminar noticias: en está página se podrán eliminar noticias.
 
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EliminarEquipo.JPG)
 
+Página para eliminar equipos: en está página se podrán eliminar equipos.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EliminarPlantilla.JPG)
+
+Página para eliminar plantilla: en está página se podrán eliminar plantillas.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/eliminarPartidos.JPG)
+
+Página para eliminar partidos: en está página se podrán eliminar partidos.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EliminarUsuarios.JPG)
+
+Página para eliminar usuarios: en está página se podrán eliminar usuarios.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EquipoCreado.JPG)
+
+Página de equipo creado: página que confirma que un equipo ha sido creado con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/EquipoEliminado.JPG)
+
+Página de equipo eliminado: página que confirma que un equipo ha sido eliminado con éxito.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/NoticiaGuardada.JPG)
+
+Página de noticia creada: página que confirma que una noticia ha sido creada con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/NoticiaEliminada.JPG)
+
+Página de noticia eliminada: página que confirma que una noticia ha sido eliminada con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/PartidoCreado.JPG)
+
+Página de partido creado: página que confirma que un partido ha sido creado con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/PartidoEliminado.JPG)
+
+Página de partido eliminado: página que confirma que un partido ha sido eliminado con éxito.
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/PlantillaGuardada.JPG)
+
+Página de plantilla creada: página que confirma que una plantilla ha sido creada con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/PlantillaEliminada.JPG)
+
+Página de plantilla eliminada: página que confirma que una plantilla ha sido eliminada con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/UsuarioCreado.JPG)
+
+Página de usuario creado: página que confirma que un usuario ha sido creado con éxito. 
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/UsuarioEliminado.JPG)
+
+Página de usuario eliminado: página que confirma que un usuario ha sido eliminado con éxito.
