@@ -144,3 +144,33 @@ Página de usuario creado: página que confirma que un usuario ha sido creado co
 ![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/Diagrama%20pagina%20dad/UsuarioEliminado.JPG)
 
 Página de usuario eliminado: página que confirma que un usuario ha sido eliminado con éxito.
+
+**Diagrama Entidad-Relación**
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/ModeloER.png)
+
+**Diagrama UML**
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Fotos%20DAD/UMLfase2.jpg)
+
+**Diagrama capturas de pantalla**
+
+Noticias
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20noticias.JPG)
+
+Equipo
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20equipos.JPG)
+
+Plantilla
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20plantilla.JPG)
+
+Partidos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20partidos.JPG)
+
+Usuario
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20usuario.JPG)
