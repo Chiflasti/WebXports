@@ -33,8 +33,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.logout().logoutUrl("/logout");
 	 http.logout().logoutSuccessUrl("/");
 
-	 // Disable CSRF at the moment
-	 http.csrf().disable();
+	 
 	 	}
 	 
 	

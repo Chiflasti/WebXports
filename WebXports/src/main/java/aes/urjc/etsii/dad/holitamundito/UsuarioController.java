@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //@RestController
 //@RequestMapping("/Usuario")
+
+/*
 @Controller
 public class UsuarioController {
 	
@@ -22,13 +24,13 @@ public class UsuarioController {
 	private UsuarioRepository repositoryUs;
 	
 	
-	/*@PostConstruct
-	public void init() {
-		Usuario u1 = new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123");
-		repositoryUs.save(u1);
-		Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
-		repositoryUs.save(u2);
-	}*/
+	//@PostConstruct
+	//public void init() {
+		//Usuario u1 = new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123");
+		//repositoryUs.save(u1);
+		//Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
+		//repositoryUs.save(u2);
+	//}
 	
 	@GetMapping("/Usuario")
 	public String Noticia(Model model) {
@@ -60,3 +62,4 @@ public class UsuarioController {
 	
 	
 }
+*/

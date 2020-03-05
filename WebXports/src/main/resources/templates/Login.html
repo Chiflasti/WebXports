@@ -4,16 +4,12 @@
 </head>
 <body>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<form action="Login" method="post">
-		<h4 class="color-black"><b>INICIAR SESIÓN <br/></b>
-		<p>Usuario:</p>
-		<input type='text' name='Usuario'/>
-		<p>Contraseña: </p>
-		<input type='text' name='Contrasenia'/>
-		<input type='submit' value='Login'/>
-		
-		<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>
-		
+	<form action="login" method="post">
+		<label>User Name:</label><input type="text" name="nick" /><br />
+		<label>Password:</label><input type="password" name="contrasenia" /><br />
+		<input type="submit" value="Sign In" /><br />	
+		<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>			
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 	</form>
 </body>
 </html>

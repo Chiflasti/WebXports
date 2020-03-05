@@ -3,5 +3,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<p align="center">Usted ha tenido éxito al cerrar sesión.</p>
 	<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>
+	<form action="/logout" method="post">
+ 		<input type="submit" value="Sign Out" />
+ 		<input type="hidden" name="_csrf" value="{{token}}"/>
+ 	</form>
 </body>
 </html>
