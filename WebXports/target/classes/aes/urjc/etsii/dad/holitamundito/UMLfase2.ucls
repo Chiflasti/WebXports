@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+<<<<<<< HEAD
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <interface id="1" language="java" name="aes.urjc.etsii.dad.holitamundito.PartidosRepository" project="WebXports" 
     file="/WebXports/src/main/java/aes/urjc/etsii/dad/holitamundito/PartidosRepository.java" binary="false" 
@@ -376,6 +377,9 @@
     <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="17"/>  
   </dependency>  
+=======
+  associations="true" dependencies="true" nesting-relationships="true">  
+>>>>>>> 1997d3e8a8c67bed32f18a5799a0c0b41cc105bf
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
