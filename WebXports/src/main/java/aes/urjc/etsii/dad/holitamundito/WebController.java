@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -38,6 +39,12 @@ public class WebController {
 	@GetMapping("/home")
 	public String home() {
 		return "home";
+	}
+	@RequestMapping("/home")
+	public String home(Model model, HttpServletRequest request) {
+
+	 model.addAttribute("admin", request.isUserInRole("ADMIN"));
+	 return "home";
 	}
 	
 

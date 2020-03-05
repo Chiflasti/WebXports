@@ -22,7 +22,34 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.authorizeRequests().antMatchers("/Plantillas").permitAll();
 	 http.authorizeRequests().antMatchers("/Partidos").permitAll();
 	 // Private pages (all other pages)
-	 http.authorizeRequests().anyRequest().authenticated();
+	 http.authorizeRequests().antMatchers("/Usuario").hasAnyRole("USER");
+	 http.authorizeRequests().antMatchers("/CrearNoticia").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/CrearEquipo").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/CrearPlantilla").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/CrearPartidos").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/CrearUsuario").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EliminarNoticia").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EliminarEquipo").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EliminarPlantilla").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EliminarPartidos").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EliminarUsuario").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/NoticiaEliminada").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EquipoEliminado").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/PlantillaEliminada").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/PartidosEliminada").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/UsuarioEliminado").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/NoticiaNoExiste").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/EquipoNoExiste").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/PlantillaNoExiste").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/PartidosNoExiste").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/UsuarioNoExiste").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/GuardadoNoticia").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/GuardadoEquipo").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/GuardadoPlantilla").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/GuardadoPartidos").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/GuardadoUsuario").hasAnyRole("ADMIN");
+	 http.authorizeRequests().antMatchers("/CascadeNo").hasAnyRole("ADMIN");
+ 
 	 // Login form
 	 http.formLogin().loginPage("/login");
 	 http.formLogin().usernameParameter("usuario");
@@ -43,6 +70,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 	 // User
 	 auth.inMemoryAuthentication().withUser("user").password(encoder.encode("pass")).roles("USER");
-	 auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("pass")).roles("ADMIN");
+	 auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("adminpass")).roles("USER", "ADMIN");
 		}
 	}
