@@ -1,6 +1,7 @@
 package aes.urjc.etsii.dad.holitamundito;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,9 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idUs;
 	
+	@Column(unique = true)
 	private String nick;
+	
 	private String correo;
 	private String nombre;
 	private String apellidos;

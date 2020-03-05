@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.web.server.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,25 +22,27 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebController {
 	
 	
-	@GetMapping("/")
-	public String Index() {
-		return "Index";
-	}
-	
-	@GetMapping("/Login")
+	@GetMapping("/login")
 	public String Login() {
-		return "Login";
+		return "login";
+	}
+
+	
+	@RequestMapping("/login")
+	public String login() {
+	 return "login";
 	}
 	
-	@GetMapping("/Loginerror")
+	@GetMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
 	
-	@GetMapping("/home")
+	/*@GetMapping("/home")
 	public String home() {
 		return "home";
 	}
+<<<<<<< HEAD
 	@RequestMapping("/home")
 	public String home(Model model, HttpServletRequest request) {
 
@@ -47,5 +50,8 @@ public class WebController {
 	 return "home";
 	}
 	
+=======
+	*/
+>>>>>>> a36643ef3ad9cdcd0850babfde2186b1b0e28b8a
 
 }
