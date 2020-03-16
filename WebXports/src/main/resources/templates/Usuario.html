@@ -5,14 +5,14 @@
 <body>
 	<p align="center"><font color="#001000" size="40" face="Arial"> USUARIO</font> </p>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<form action="Usuaio" method="post">
+	<form action="Usuario" method="post">
 	
 	{{#usuario}}
-	<p>{{idUs}} -> {{nick}} <br> {{correo}} {{nombre}} {{apellidos}}</p>
+	<p>{{id}} -> {{username}} <br> {{password}}</p>
 	{{/usuario}}  
 	
-	<p align="center"><br><a href="CrearUsuario.html" class="btn btn-primary"><font color="#FFFFFF">Crear usuario</a><br>
-	<p align="center"><br><a href="EliminarUsuario.html" class="btn btn-primary"><font color="#FFFFFF">Eliminar usuario</a><br>
+	<p align="center"><br><a href="CrearUsuario.html" class="btn btn-info"><font color="#FFFFFF">Crear usuario</a><br>
+	<p align="center"><br><a href="EliminarUsuario.html" class="btn btn-info"><font color="#FFFFFF">Eliminar usuario</a><br>
     <p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>
 	</form>
 </body>

@@ -5,11 +5,12 @@
 <body>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<form action="login" method="post">
-		<label>User Name:</label><input type="text" name="nick" /><br />
-		<label>Password:</label><input type="password" name="contrasenia" /><br />
+		<label>User Name:</label><input type="text" name="username" /><br />
+		<label>Password:</label><input type="password" name="password" /><br />
 		<input type="submit" value="Sign In" /><br />	
-		<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>			
 		<input type="hidden" name="_csrf" value="{{token}}"/>
+		<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>			
+		
 	</form>
 </body>
 </html>

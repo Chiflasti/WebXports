@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //@RestController
 //@RequestMapping("/Usuario")
 
-/*
+
 @Controller
 public class UsuarioController {
 	
@@ -62,4 +62,3 @@ public class UsuarioController {
 	
 	
 }
-*/

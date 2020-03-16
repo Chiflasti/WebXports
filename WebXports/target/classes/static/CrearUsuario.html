@@ -1,22 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8"/>
 </head>
 <body>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<form action="CrearUsuario" method="post">
+	<form action="CrearUsuario" method="post" class="registerForm">
 		<h4 class="color-black"><b>CREAR USUARIO <br/></b>
 		<br><p>Nick: </p>
-		<input type='text' name='nick'/>
-		<p>Correo:</p>
-		<input type='text' name='correo'/>
-		<p>Nombre:</p>
-		<input type='text' name='nombre'/>
-		<p>Apellidos:</p>
-		<input type='text' name='apellidos'/>
+		<input type='text' name='name'/>
+		<p>Contraseña:</p>
+		<input type='text' name='passwordHash'/>
 		<input type='submit' value='Guardar'/>
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		
-		<p align="center"><br><a href="/" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>
+
+		
+		<p align="center"><br><a href="/home" class="btn btn-danger"><font color="#FFFFFF">Volver</a><br></p>
+		
 		
 	</form>
 </body>

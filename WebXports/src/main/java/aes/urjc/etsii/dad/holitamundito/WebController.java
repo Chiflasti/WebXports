@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.web.server.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class WebController {
 	
+	@Autowired
+	private UsuarioRepository userRepository;
+	
+	
 	
 	@GetMapping("/login")
 	public String Login() {
@@ -28,30 +31,48 @@ public class WebController {
 	}
 
 	
-	@RequestMapping("/login")
-	public String login() {
-	 return "login";
-	}
-	
 	@GetMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
 	
-	/*@GetMapping("/home")
-	public String home() {
-		return "home";
-	}
-<<<<<<< HEAD
-	@RequestMapping("/home")
-	public String home(Model model, HttpServletRequest request) {
-
-	 model.addAttribute("admin", request.isUserInRole("ADMIN"));
-	 return "home";
+    @GetMapping("/home")
+    public String home(Model model, HttpServletRequest request) {
+    	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
+    	
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+    	model.addAttribute("username", user.getName());
+    	
+    	
+    	return "home";
+    }
+    
+    
+	
+	/*@PostMapping("/CrearUsuario")
+	public String crearUsuario(Model model, Usuario u) {
+		userRepository.save(u);
+		return "GuardadoUsuario";
 	}
 	
-=======
-	*/
->>>>>>> a36643ef3ad9cdcd0850babfde2186b1b0e28b8a
+	
+	
+	@PostMapping(value = "/EliminarUsuario")
+	public String eliminarPlantilla(Model model, @RequestParam long idUs){
+		Optional<Usuario> usuario = userRepository.findById(idUs);
+
+		if(usuario.isPresent()) {
+			userRepository.delete(usuario.get());
+			return "UsuarioEliminado";
+		}else {
+			return "UsuarioNoExiste";
+		}
+
+	}*/
+    
+    @GetMapping("/admin")
+    public String admin() {
+    	return "admin";
+    }
 
 }

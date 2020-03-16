@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 //import javax.annotation.PostConstruct;
 
@@ -29,6 +30,9 @@ public class NoticiaController {
 	@Autowired
 	private NoticiaRepository repositorynot;
 	
+	@Autowired
+	private UsuarioRepository repositoryus;
+	
 
 	@GetMapping("/Noticias")
 	public String Noticia(Model model) {
@@ -36,9 +40,19 @@ public class NoticiaController {
 		return "Noticias";
 	}
 	
-	@PostMapping("/CrearNoticia")
-	public String crearNoticia(Model model, Noticia n) {
+	/*@PostMapping("/CrearNoticia")
+	public String crearNoticia(Model model,@RequestParam  String nombre,@RequestParam String categoria1,@RequestParam String  dia,@RequestParam String  mes,@RequestParam String  anio) {
+		Noticia n = new Noticia(categoria1,dia,mes,anio,nombre);
 		repositorynot.save(n);
+		
+		return "GuardadoNoticia";
+	}*/
+	
+	//RequestMapping(value=url)method=Request method
+	@PostMapping("/CrearNoticia")
+	public String crearNoticia(Model model,Noticia n) {
+		repositorynot.save(n);
+		model.addAttribute("noticia", n);
 		return "GuardadoNoticia";
 	}
 	

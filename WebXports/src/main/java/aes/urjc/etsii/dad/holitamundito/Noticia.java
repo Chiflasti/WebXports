@@ -40,6 +40,15 @@ public class Noticia {
 		this.equipo = equipo;
 	}
 
+	public Noticia( String nombre, String categoria1, String  dia, String  mes, String  anio) {
+		this.nombre = nombre;
+		this.categoria1 = categoria1;
+		this.dia = dia;
+		this.mes = mes;
+		this.anio = anio;
+	}
+	
+	
 	public long getId() {
 		return id;
 	}

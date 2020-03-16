@@ -1,83 +1,64 @@
 package aes.urjc.etsii.dad.holitamundito;
 
 
-import javax.persistence.Column;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 public class Usuario {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idUs;
-	
-	@Column(unique = true)
-	private String nick;
-	
-	private String correo;
-	private String nombre;
-	private String apellidos;
-	private String contrasenia;
-	
+	private Long id;
+
+	private String name;
+
+	private String passwordHash;
+
+	@ElementCollection(fetch = FetchType.EAGER)
+	private List<String> roles;
+
 	public Usuario() {
-		
-	}
-	
-	public Usuario(String nick, String correo, String nombre, String apellidos,String contrasenia) {
-		this.nick = nick;
-		this.correo = correo;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.contrasenia = contrasenia;
-	}
-	
-	public long getIdUs() {
-		return idUs;
 	}
 
-	public void setIdUs(int idUs) {
-		this.idUs = idUs;
+	public Usuario(String name, String password, String... roles) {
+		this.name = name;
+		this.passwordHash = new BCryptPasswordEncoder().encode(password);
+		this.roles = new ArrayList<>(Arrays.asList(roles));
 	}
 
-	public String getNick() {
-		return nick;
+	public String getName() {
+		return name;
 	}
-	public void setNick(String nick) {
-		this.nick = nick;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getCorreo() {
-		return correo;
+
+	public String getPasswordHash() {
+		return passwordHash;
 	}
-	public void setCorreo(String correo) {
-		this.correo = correo;
+
+	public void setPasswordHash(String passwordHash) {
+		this.passwordHash = passwordHash;
 	}
-	public String getNombre() {
-		return nombre;
+
+	public List<String> getRoles() {
+		return roles;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
-	public String getApellidos() {
-		return apellidos;
-	}
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
-	public String getContrasenia() {
-		return contrasenia;
-	}
-	public void setContrasenia(String contrasenia) {
-		this.contrasenia = contrasenia;
-	}
-	@Override
-	public String toString() {
-		return "Usuario [nick=" + nick + ", correo=" + correo + ", nombre=" + nombre + ", apellidos=" + apellidos
-				+ ", contrasenia=" + contrasenia + "]";
-	}
-	
-	
+
 }

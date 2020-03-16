@@ -1,0 +1,23 @@
+  
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<h1>Hello  {{username}}!</h1>
+	<p>This is a private page</p>
+	
+	{{#admin}}
+	<p align="center"><br><a href="CrearNoticia.html" class="btn btn-info"><font color="#FFFFFF">Crear noticias</a><br></p>
+	<p align="center"><br><a href="CrearUsuario.html" class="btn btn-primary"><font color="#000010">Crear usuario</a><br>
+	<p align="center"><br><a href="EliminarUsuario.html" class="btn btn-primary"><font color="#000010">Eliminar usuario</a><br>
+    </p>
+	{{/admin}}
+
+	<form action="/logout" method="post">
+		<input type="submit" value="Sign Out" />
+		<input type="hidden" name="_csrf" value="{{token}}"/>
+	</form>
+</body>
+</html>
