@@ -37,7 +37,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 //http.authorizeRequests().antMatchers("/index2").hasAnyRole("USER,ADMIN");
 	 http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/home").hasAnyRole("USER","ADMIN");
-	 http.authorizeRequests().antMatchers("/CrearNoticia").permitAll();
+	 http.authorizeRequests().antMatchers("/CrearNoticia").hasAnyRole("ADMIN");
 	 //http.authorizeRequests().antMatchers("/CrearNoticia").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/CrearEquipo").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/CrearPlantilla").hasAnyRole("ADMIN");
@@ -77,7 +77,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.logout().logoutSuccessUrl("/");
 
 
-	 http.authorizeRequests().anyRequest().permitAll();
 	 	}
 	 
 

@@ -40,20 +40,28 @@ public class NoticiaController {
 		return "Noticias";
 	}
 	
-	/*@PostMapping("/CrearNoticia")
-	public String crearNoticia(Model model,@RequestParam  String nombre,@RequestParam String categoria1,@RequestParam String  dia,@RequestParam String  mes,@RequestParam String  anio) {
-		Noticia n = new Noticia(categoria1,dia,mes,anio,nombre);
-		repositorynot.save(n);
-		
-		return "GuardadoNoticia";
-	}*/
-	
-	//RequestMapping(value=url)method=Request method
+
 	@PostMapping("/CrearNoticia")
 	public String crearNoticia(Model model,Noticia n) {
 		repositorynot.save(n);
 		model.addAttribute("noticia", n);
 		return "GuardadoNoticia";
+	}
+	
+	@GetMapping("/CrearNoticia")
+	public String crearNoticiaTem(Model model,Noticia n, HttpServletRequest request) {
+		Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "CrearNoticia";
+	}
+	
+	@GetMapping("/EliminarNoticia")
+	public String eliminarNoticiaTem(Model model,Noticia n, HttpServletRequest request) {
+		Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "EliminarNoticia";
 	}
 	
 	@PostMapping(value = "/EliminarNoticia")
