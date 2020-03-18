@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,19 +20,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UsuarioController {
-	
+
 	@Autowired 
 	private UsuarioRepository repositoryUs;
 	
 	
-	//@PostConstruct
-	//public void init() {
+	/*@PostConstruct
+	public void init() {
 		//Usuario u1 = new Usuario("yoshi","yoshi@gmail.com","Alberto","García","123");
 		//repositoryUs.save(u1);
 		//Usuario u2 = new Usuario("mario","mario@gmail.com","Mario","Piloto","123");
 		//repositoryUs.save(u2);
-	//}
-	
+	}
+	*/
 	@GetMapping("/Usuario")
 	public String Noticia(Model model) {
 		model.addAttribute("usuario", repositoryUs.findAll());
@@ -57,6 +58,21 @@ public class UsuarioController {
 
 	}
 	
+	@GetMapping("/CrearUsuario")
+	public String crearUsuarioTem(Model model,Usuario u, HttpServletRequest request) {
+		Usuario user = repositoryUs.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "CrearUsuario";
+	}
+	
+	@GetMapping("/EliminarUsuario")
+	public String eliminarUsuarioTem(Model model,Usuario u, HttpServletRequest request) {
+		Usuario user = repositoryUs.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "EliminarUsuario";
+	}
 	
 	
 	

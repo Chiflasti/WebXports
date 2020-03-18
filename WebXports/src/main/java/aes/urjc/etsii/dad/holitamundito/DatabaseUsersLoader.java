@@ -10,11 +10,11 @@ public class DatabaseUsersLoader {
 	@Autowired
     private UsuarioRepository userRepository;
 
-   /* @PostConstruct
+ /*  @PostConstruct
     private void initDatabase() {
     	
     	userRepository.save(new Usuario("user", "pass", "USER"));
 		userRepository.save(new Usuario("admin", "adminpass", "USER", "ADMIN"));
-    }*/
-
+    }
+*/
 }

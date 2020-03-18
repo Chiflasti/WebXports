@@ -64,7 +64,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.authorizeRequests().antMatchers("/GuardadoPartidos").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/GuardadoUsuario").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/CascadeNo").hasAnyRole("ADMIN");
- 
+	 http.authorizeRequests().antMatchers("/Gestion").hasAnyRole("ADMIN");
+	 
 	 // Login form
      http.formLogin().loginPage("/login");
      http.formLogin().usernameParameter("username");
@@ -85,7 +86,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 	 // User
 		//auth.authenticationProvider(authenticationProvider);
-	 auth.inMemoryAuthentication().withUser("user").password(encoder.encode("pass")).roles("USER");
-	 auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("adminpass")).roles("USER", "ADMIN");
+		auth.inMemoryAuthentication().withUser("user").password(encoder.encode("pass")).roles("USER");
+		auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("adminpass")).roles("USER", "ADMIN");
 		}
 	}

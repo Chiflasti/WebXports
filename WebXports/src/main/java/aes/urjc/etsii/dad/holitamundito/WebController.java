@@ -40,6 +40,7 @@ public class WebController {
     public String home(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
     	
+    	model.addAttribute("user", request.isUserInRole("USER"));
     	model.addAttribute("admin", request.isUserInRole("ADMIN"));
     	model.addAttribute("username", user.getName());
     	
@@ -47,7 +48,14 @@ public class WebController {
     	return "home";
     }
     
-    
+    @GetMapping("/Gestion")
+    public String Gestion(Model model, HttpServletRequest request) {
+    	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
+    	
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+    	 	
+    	return "Gestion";
+    }
 	
 	/*@PostMapping("/CrearUsuario")
 	public String crearUsuario(Model model, Usuario u) {

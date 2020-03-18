@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -32,6 +33,8 @@ public class PlantillaController {
 	private PartidosRepository repositorypar;
 	@Autowired
 	private JornadaRepository repositoryjor;
+	@Autowired
+	private UsuarioRepository repositoryuser;
 	
 	
 	
@@ -129,6 +132,22 @@ public class PlantillaController {
 			return "PlantillaNoExiste";
 		}
 
+	}
+	
+	@GetMapping("/CrearPlantilla")
+	public String crearPlantilla(Model model,Plantilla p, HttpServletRequest request) {
+		Usuario user = repositoryuser.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "CrearPlantilla";
+	}
+	
+	@GetMapping("/EliminarPlantilla")
+	public String eliminarPlantillaTem(Model model,Plantilla p, HttpServletRequest request) {
+		Usuario user = repositoryuser.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "EliminarPlantilla";
 	}
 	
 	
