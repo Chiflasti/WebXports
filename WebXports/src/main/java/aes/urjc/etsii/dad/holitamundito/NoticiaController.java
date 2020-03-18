@@ -40,6 +40,12 @@ public class NoticiaController {
 		return "Noticias";
 	}
 	
+	@GetMapping("/NoticiasUser")
+	public String NoticiaUser(Model model) {
+		model.addAttribute("noticia", repositorynot.findAll());
+		return "NoticiasUser";
+	}
+	
 
 	@PostMapping("/CrearNoticia")
 	public String crearNoticia(Model model,Noticia n) {

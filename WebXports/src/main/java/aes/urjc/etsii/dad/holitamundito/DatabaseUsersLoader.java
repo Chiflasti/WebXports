@@ -10,7 +10,7 @@ public class DatabaseUsersLoader {
 	@Autowired
     private UsuarioRepository userRepository;
 
-<<<<<<< HEAD
+
  /*  @PostConstruct
 =======
     /*@PostConstruct

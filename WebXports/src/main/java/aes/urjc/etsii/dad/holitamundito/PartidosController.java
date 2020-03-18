@@ -29,10 +29,24 @@ public class PartidosController {
 	
 	
 	@GetMapping("/Partidos")
-	public String Partido(Model model) {
+	public String Partido(Model model, HttpServletRequest request) {
 		model.addAttribute("partidos", repositorypar.findAll());
+		//Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		//model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		//model.addAttribute("user", request.isUserInRole("USER"));
+		
 		return "Partidos";
 	}
+	
+	@GetMapping("/PartidosUser")
+	public String PartidosUser(Model model, HttpServletRequest request) {
+		model.addAttribute("partidos", repositorypar.findAll());
+		Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		
+		return "PartidosUser";
+	}
+	
 	
 	@GetMapping("/CrearPartidos")
 	public String crearPartidoTem(Model model,Partidos p, HttpServletRequest request) {

@@ -33,6 +33,7 @@ public class UsuarioController {
 		//repositoryUs.save(u2);
 	}
 	*/
+/*
 	@GetMapping("/Usuario")
 	public String Noticia(Model model) {
 		model.addAttribute("usuario", repositoryUs.findAll());
@@ -59,7 +60,7 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("/CrearUsuario")
-	public String crearUsuarioTem(Model model,Usuario u, HttpServletRequest request) {
+	public String crearUsuarioTem(Model model, Usuario u , HttpServletRequest request) {
 		Usuario user = repositoryUs.findByName(request.getUserPrincipal().getName());
 		model.addAttribute("username", user.getName());
     	model.addAttribute("admin", request.isUserInRole("ADMIN"));
@@ -74,7 +75,5 @@ public class UsuarioController {
 		return "EliminarUsuario";
 	}
 	
-	
-	
-	
+
 }*/

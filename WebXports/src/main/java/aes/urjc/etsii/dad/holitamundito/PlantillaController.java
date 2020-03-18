@@ -109,9 +109,15 @@ public class PlantillaController {
 		
 	}*/	
 	@GetMapping("/Plantillas")
-	public String Noticia(Model model) {
+	public String Plantilla(Model model) {
 		model.addAttribute("plantillas", repository.findAll());
 		return "Plantillas";
+	}
+	
+	@GetMapping("/PlantillasUser")
+	public String PlantillaUser(Model model) {
+		model.addAttribute("plantillas", repository.findAll());
+		return "PlantillasUser";
 	}
 	
 	@PostMapping("/CrearPlantilla")

@@ -33,6 +33,12 @@ public class EquiposController {
 		return "Equipos";
 	}
 	
+	@GetMapping("/EquiposUser")
+	public String EquiposUser(Model model) {
+		model.addAttribute("equipos", repositoryeq.findAll());
+		return "EquiposUser";
+	}
+	
 	@PostMapping("/CrearEquipo")
 	public String crearEquipo(Model model, Equipos e) {
 		repositoryeq.save(e);
