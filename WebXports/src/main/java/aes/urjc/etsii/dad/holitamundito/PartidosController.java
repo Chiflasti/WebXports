@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,22 +24,40 @@ public class PartidosController {
 
 	@Autowired
 	private PartidosRepository repositorypar;
+	@Autowired
+	private UsuarioRepository repositoryus;
 	
 	
 	@GetMapping("/Partidos")
-	public String Noticia(Model model) {
+	public String Partido(Model model) {
 		model.addAttribute("partidos", repositorypar.findAll());
 		return "Partidos";
 	}
 	
+	@GetMapping("/CrearPartidos")
+	public String crearPartidoTem(Model model,Partidos p, HttpServletRequest request) {
+		Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "CrearPartidos";
+	}
+	
 	@PostMapping("/CrearPartidos")
-	public String crearPlantilla(Model model, Partidos p) {
+	public String crearPartidos(Model model, Partidos p) {
 		repositorypar.save(p);
 		return "GuardadoPartidos";
 	}
 	
+	@GetMapping("/EliminarPartidos")
+	public String eliminarPartidoTem(Model model,Partidos p, HttpServletRequest request) {
+		Usuario user = repositoryus.findByName(request.getUserPrincipal().getName());
+		model.addAttribute("username", user.getName());
+    	model.addAttribute("admin", request.isUserInRole("ADMIN"));
+		return "EliminarPartidos";
+	}
+	
 	@PostMapping(value = "/EliminarPartidos")
-	public String eliminarPlantilla(Model model, @RequestParam long idPartido){
+	public String eliminarPartidos(Model model, @RequestParam long idPartido){
 		Optional<Partidos> partidos = repositorypar.findById(idPartido);
 
 		if(partidos.isPresent()) {
