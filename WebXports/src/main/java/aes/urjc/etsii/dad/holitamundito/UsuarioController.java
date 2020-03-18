@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //@RequestMapping("/Usuario")
 
 
-@Controller
+/*@Controller
 public class UsuarioController {
 	
 	@Autowired 
@@ -61,4 +61,4 @@ public class UsuarioController {
 	
 	
 	
-}
+}*/
