@@ -7,6 +7,8 @@ import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 
 
@@ -24,8 +27,13 @@ public class PartidosController {
 
 	@Autowired
 	private PartidosRepository repositorypar;
+	
 	@Autowired
 	private UsuarioRepository repositoryus;
+	
+	private RestTemplate restTemplate = new RestTemplate();
+	
+	private final String PARTIDOS_URL = "http://localhost:8082/CrearPartidos";
 	
 	
 	@GetMapping("/Partidos")
@@ -58,9 +66,15 @@ public class PartidosController {
 	
 	@PostMapping("/CrearPartidos")
 	public String crearPartidos(Model model, Partidos p) {
+		Partidos p2 = new Partidos();
+		p2 = p;
+		String url = PARTIDOS_URL;
+		HttpEntity<Partidos> partidoBody= new HttpEntity<>(p2);
+	    restTemplate.exchange(url, HttpMethod.POST,partidoBody,Void.class);
 		repositorypar.save(p);
 		return "GuardadoPartidos";
 	}
+	
 	
 	@GetMapping("/EliminarPartidos")
 	public String eliminarPartidoTem(Model model,Partidos p, HttpServletRequest request) {

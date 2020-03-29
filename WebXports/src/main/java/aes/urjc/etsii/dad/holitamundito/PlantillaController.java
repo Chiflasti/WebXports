@@ -107,7 +107,7 @@ public class PlantillaController {
 		p1.addPartidos(Comando_Sevilla, eMonos);
 		repositorypar.save(p1);
 		
-	}*/	
+	}*/
 	@GetMapping("/Plantillas")
 	public String Plantilla(Model model) {
 		model.addAttribute("plantillas", repository.findAll());

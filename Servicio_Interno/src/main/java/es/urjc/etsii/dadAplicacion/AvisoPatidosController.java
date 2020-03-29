@@ -1,5 +1,6 @@
 package es.urjc.etsii.dadAplicacion;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.validation.BindingResult;
@@ -8,40 +9,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import javax.validation.ValidationException;
 
 @RestController
-@RequestMapping("/avisopartidos")
 public class AvisoPatidosController {
 
+	/*@Autowired 
+	private UsuarioRepository userRepo;*/
+	
+	private JavaMailSenderImpl EnvioEmail = new JavaMailSenderImpl();
+	
     private Email email;
 
     public AvisoPatidosController(Email email) {
         this.email = email;
+        this.configurarEnvioEmail();
     }
-
-    @PostMapping
-    public void sendAviso(@RequestBody AvisoPartidos aviso,
-                             BindingResult bindingResult){
-        if(bindingResult.hasErrors()){
-            throw new ValidationException("Aviso is not valid");
+    
+        
+        
+        public void configurarEnvioEmail() {
+        
+        	EnvioEmail.setHost(email.getHost());
+        	EnvioEmail.setPort(2525);
+        	EnvioEmail.setUsername(email.getUsername());
+        	EnvioEmail.setPassword(email.getPassword());
         }
 
-        // Create a mail sender
-        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost(this.email.getHost());
-        mailSender.setPort(this.email.getPort());
-        mailSender.setUsername(this.email.getUsername());
-        mailSender.setPassword(this.email.getPassword());
-
-        // Create an email instance
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setFrom(aviso.getEmail());
-        mailMessage.setTo("josbernikon@gmail.com");
-        mailMessage.setSubject("New aviso from " + aviso.getName());
-        mailMessage.setText(aviso.getAviso());
+        
+        @PostMapping("/CrearPartidos")
+        public void nuevoPartido(@RequestBody Partidos partidos) {
+        	
+        	SimpleMailMessage correo = new SimpleMailMessage();
+        	correo.setFrom("WebXports");
+        	correo.setTo("lxinvento@gmail.com");
+        	correo.setSubject("Nuevo partido");
+        	correo.setText("Te has perdido el resultado del ultimo partido, entra en la app para mirarlo");
 
         // Send mail
-        mailSender.send(mailMessage);
-    }
+       //System.out.println(message.toString());
+        	EnvioEmail.send(correo);
+    }	
 }

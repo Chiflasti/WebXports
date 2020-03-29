@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,10 +14,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 	@Configuration
+	@EnableWebSecurity
+	//@EnableGlobalMethodSecurity
 	public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		
 		@Autowired
 		 public UserRepositoryAuthenticationProvider authenticationProvider;
+		
 		
 		
 	 @Override
@@ -36,7 +40,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	// http.authorizeRequests().antMatchers("/Usuario").hasAnyRole("USER");
 	 //http.authorizeRequests().antMatchers("/index2").hasAnyRole("USER,ADMIN");
 	 http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
-	 http.authorizeRequests().antMatchers("/home").hasAnyRole("USER","ADMIN");
+	 http.authorizeRequests().antMatchers("/home").hasAnyRole("USER");  //("USER","ADMIN");
 	 http.authorizeRequests().antMatchers("/PlantillasUser").hasAnyRole("USER","ADMIN");
 	 http.authorizeRequests().antMatchers("/PartidosUser").hasAnyRole("USER","ADMIN");
 	 http.authorizeRequests().antMatchers("/NoticiasUser").hasAnyRole("USER","ADMIN");
@@ -69,6 +73,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.authorizeRequests().antMatchers("/GuardadoUsuario").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/CascadeNo").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/Gestion").hasAnyRole("ADMIN");
+	 http.authorizeRequests().anyRequest().authenticated();
 	 
 	 // Login form
      http.formLogin().loginPage("/login");
@@ -87,9 +92,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 	@Override
 	 protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+		
 	 // User
 		//auth.authenticationProvider(authenticationProvider);
+		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		auth.inMemoryAuthentication().withUser("user").password(encoder.encode("pass")).roles("USER");
 		auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("adminpass")).roles("USER", "ADMIN");
 		}

@@ -36,6 +36,7 @@ public class WebController {
 		return "loginerror";
 	}
 	
+	
     @GetMapping("/home")
     public String home(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
