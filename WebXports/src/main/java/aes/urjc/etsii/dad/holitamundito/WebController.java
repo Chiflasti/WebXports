@@ -1,23 +1,14 @@
 package aes.urjc.etsii.dad.holitamundito;
 
-import java.util.ArrayList;
-import java.util.Optional;
-
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@Controller
 public class WebController {
 	
 	@Autowired
@@ -27,7 +18,7 @@ public class WebController {
 	
 	@RequestMapping("/login")
 	public String Login() {
-		return "login";
+		return "Login";
 	}
 
 	
@@ -79,9 +70,9 @@ public class WebController {
 
 	}*/
     
-	@RequestMapping("/admin")
+	/*@RequestMapping("/admin")
     public String admin() {
     	return "admin";
-    }
+    }*/
 
 }
