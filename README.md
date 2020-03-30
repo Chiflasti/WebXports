@@ -174,3 +174,107 @@ Partidos
 Usuario
 
 ![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20usuario.JPG)
+
+# Fase 3
+
+**Capturas de pantalla de la aplicación sin loguear, siendo user y admin**
+
+Página Principal sin loguear
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/Index.jpg)
+
+Página de noticias de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/NoticiasNU.jpg)
+
+Página de equipo de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/EquipoNU.jpg)
+
+Página de plantilla de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU%202.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU%203.jpg)
+
+Página de partidos de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PartidosNU.jpg)
+
+Página de login para user y admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Login.jpg)
+
+Página principal de user
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/HomeU.jpg)
+
+Página principal de admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Pagina%20Principal%20Admin.jpg)
+
+Página de gestión de admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Gesti%C3%B3nAdmin.jpg)
+
+Página de crear noticias
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearNoticiaAdmin.jpg)
+
+Página de crear equipos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearEquipoAdmin.jpg)
+
+Página de crear plantilla
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearPlantillaAdmin.jpg)
+
+Página de crear partidos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearPartidosAdmin.jpg)
+
+Página para eliminar noticias
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarNoticiaAdmin.jpg)
+
+Página para eliminar equipos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarEquipoAdmin.jpg)
+
+Página para eliminar plantilla
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarPlantillaAdmin.jpg)
+
+Página para eliminar partidos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarPartidosAdmin.jpg)
+
+**Diagrmas de navegación de la Fase 3**
+
+Diagrama de navegación sin loguear
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/NavegacionSinLoguear.jpg)
+
+Diagrama de navegación siendo user
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/Navegacion1.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/Navegacion2.jpg)
+
+Diagrama de navegación siendo admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Diagrama%20Admin%201.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/DIAGRAMA%20DE%20NAVEGACION%20DE%20ADMINISTRADOR.jpg)
+
+**Diagramas UML Fase 3**
+
+UML del servicio interno
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Servicio_Interno/src/main/java/es/urjc/etsii/dadAplicacion/UML_ServicioInterno.jpg)
+
+UML de la aplicación
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/WebXports/src/main/java/aes/urjc/etsii/dad/holitamundito/UML_fase3_WebXports.jpg)
