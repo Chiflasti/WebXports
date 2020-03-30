@@ -12,11 +12,12 @@ public class DatabaseUsersLoader {
 	@Autowired
     private UsuarioRepository userRepository;
 
- /*  @PostConstruct
+   /*@PostConstruct
     private void initDatabase() {
     	
-    	userRepository.save(new Usuario("user", "pass", "USER", "sdas@gmail.com"));
-		userRepository.save(new Usuario("admin", "adminpass", "ADMIN", "sasd@gmail.com"));
+    	userRepository.save(new Usuario("Starky", "pass", "USER", "WebXportsDAD@gmail.com"));
+    	userRepository.save(new Usuario("Hutch", "pass", "USER", "dadwebxports@gmail.com"));
+		userRepository.save(new Usuario("KamiSama", "adminpass", "ADMIN", "kalilinux6669@gmail.com"));
     }
-*/
+    */
 }

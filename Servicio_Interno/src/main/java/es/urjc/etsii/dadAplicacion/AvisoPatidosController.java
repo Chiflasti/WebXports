@@ -16,8 +16,8 @@ import javax.validation.ValidationException;
 @RestController
 public class AvisoPatidosController {
 
-	/*@Autowired 
-	private UsuarioRepository userRepo;*/
+	@Autowired 
+	private UsuarioRepository userRepo;
 	
 	private JavaMailSenderImpl EnvioEmail = new JavaMailSenderImpl();
 	
@@ -41,15 +41,16 @@ public class AvisoPatidosController {
         
         @PostMapping("/CrearPartidos")
         public void nuevoPartido(@RequestBody Partidos partidos) {
+        	List<Usuario> u = userRepo.findAll();
         	
-        	SimpleMailMessage correo = new SimpleMailMessage();
-        	correo.setFrom("WebXports");
-        	correo.setTo("lxinvento@gmail.com");
-        	correo.setSubject("Nuevo partido");
-        	correo.setText("Te has perdido el resultado del ultimo partido, entra en la app para mirarlo");
-
-        // Send mail
-       //System.out.println(message.toString());
-        	EnvioEmail.send(correo);
-    }	
+        	for(Usuario us : u) {
+	        	SimpleMailMessage correo = new SimpleMailMessage();
+	        	correo.setFrom("WebXports");
+	        	//correo.setTo(userRepo.findAll().getMail);
+	        	correo.setTo(us.getMail());
+	        	correo.setSubject("Nuevo partido");
+	        	correo.setText("Te has perdido el resultado del ultimo partido, entra en la app para mirarlo");       
+	        	EnvioEmail.send(correo);
+        	}
+    }		
 }
