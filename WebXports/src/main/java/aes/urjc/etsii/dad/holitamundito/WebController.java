@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller
+@RestController
 public class WebController {
 	
 	@Autowired
@@ -25,19 +25,19 @@ public class WebController {
 	
 	
 	
-	@GetMapping("/login")
+	@RequestMapping("/login")
 	public String Login() {
 		return "login";
 	}
 
 	
-	@GetMapping("/loginerror")
+	@RequestMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
 	
 	
-    @GetMapping("/home")
+	@RequestMapping("/home")
     public String home(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
     	
@@ -49,7 +49,7 @@ public class WebController {
     	return "home";
     }
     
-    @GetMapping("/Gestion")
+	@RequestMapping("/Gestion")
     public String Gestion(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
     	
@@ -79,7 +79,7 @@ public class WebController {
 
 	}*/
     
-    @GetMapping("/admin")
+	@RequestMapping("/admin")
     public String admin() {
     	return "admin";
     }
