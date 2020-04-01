@@ -325,6 +325,7 @@ para cerrar mysql y acabar el proceso.
 Una vez se tengan los ejecutables tanto de la aplicación principal como de el servicio interno en la maquina virtual, simplemente hay que acceder con una terminal por proyecto al directorio en el que se encuentren y ejecutarlos mediante el comando:
 
 java -jar NombreAplicacion-0.0.1-SNAPSHOT.jar
+
 java -jar ServicioInterno-0.0.1-SNAPSHOT.jar
 
 Si todo va bien, se iniciarán ambas aplicaciones, y poniendo la url con el puerto adecuado en cualquier browser la aplicación ya funcionará correctamente.
