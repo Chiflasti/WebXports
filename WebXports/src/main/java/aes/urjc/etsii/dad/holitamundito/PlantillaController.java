@@ -37,8 +37,8 @@ public class PlantillaController {
 	private UsuarioRepository repositoryuser;
 	
 	
-	
-	/*@PostConstruct
+	/*
+	@PostConstruct
 	public void init() {
 		Equipos Movistar_Titans = new Equipos("Movistar Titans", "Malaga", "Equipo de una universidad de Malaga, acaban de subir de division");
 		repositoryeq.save(Movistar_Titans);
