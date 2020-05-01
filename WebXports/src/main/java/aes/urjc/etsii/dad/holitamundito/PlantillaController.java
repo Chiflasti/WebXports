@@ -36,12 +36,7 @@ public class PlantillaController {
 	@Autowired
 	private UsuarioRepository repositoryuser;
 	
-	
-<<<<<<< HEAD
-	
-=======
 	/*
->>>>>>> 37c8eb506d299bce9142c6692506f5ee3aabcec3
 	@PostConstruct
 	public void init() {
 		Equipos Movistar_Titans = new Equipos("Movistar Titans", "Malaga", "Equipo de una universidad de Malaga, acaban de subir de division");
@@ -111,7 +106,7 @@ public class PlantillaController {
 		p1.addPartidos(Comando_Sevilla, eMonos);
 		repositorypar.save(p1);
 		
-	}
+	}*/
 	
 	@GetMapping("/Plantillas")
 	public String Plantilla(Model model) {
