@@ -174,3 +174,161 @@ Partidos
 Usuario
 
 ![img](https://github.com/Chiflasti/WebXports/blob/master/Diagramas/Diagrama%20de%20usuario.JPG)
+
+# Fase 3
+
+**Capturas de pantalla de la aplicación sin loguear, siendo user y admin**
+
+Página Principal sin loguear
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/Index.jpg)
+
+Página de noticias de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/NoticiasNU.jpg)
+
+Página de equipo de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/EquipoNU.jpg)
+
+Página de plantilla de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU%202.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PlantillaNU%203.jpg)
+
+Página de partidos de todos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/PartidosNU.jpg)
+
+Página de login para user y admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Login.jpg)
+
+Página principal de user
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/HomeU.jpg)
+
+Página principal de admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Pagina%20Principal%20Admin.jpg)
+
+Página de gestión de admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Gesti%C3%B3nAdmin.jpg)
+
+Página de crear noticias
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearNoticiaAdmin.jpg)
+
+Página de crear equipos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearEquipoAdmin.jpg)
+
+Página de crear plantilla
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearPlantillaAdmin.jpg)
+
+Página de crear partidos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/CrearPartidosAdmin.jpg)
+
+Página para eliminar noticias
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarNoticiaAdmin.jpg)
+
+Página para eliminar equipos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarEquipoAdmin.jpg)
+
+Página para eliminar plantilla
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarPlantillaAdmin.jpg)
+
+Página para eliminar partidos
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/EliminarPartidosAdmin.jpg)
+
+**Diagrmas de navegación de la Fase 3**
+
+Diagrama de navegación sin loguear
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Sin%20loguear/NavegacionSinLoguear.jpg)
+
+Diagrama de navegación siendo user
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/Navegacion1.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/Usuario/Navegacion2.jpg)
+
+Diagrama de navegación siendo admin
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/Diagrama%20Admin%201.jpg)
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Capturas%20de%20navegacion%20Fase%203/ADMIN/DIAGRAMA%20DE%20NAVEGACION%20DE%20ADMINISTRADOR.jpg)
+
+**Diagramas UML Fase 3**
+
+UML del servicio interno
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Servicio_Interno/src/main/java/es/urjc/etsii/dadAplicacion/UML_ServicioInterno.jpg)
+
+UML de la aplicación
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/WebXports/src/main/java/aes/urjc/etsii/dad/holitamundito/UML_fase3_WebXports.jpg)
+
+**INSTALACIÓN DE LA APP EN LA MÁQUINA VIRTUAL**
+
+Nosotros en este caso hemos usado una máquina virtual de virtual box.
+Una vez se este con la máquina virtual funcionando, habría que instalar mysql y java8 para poder ejecutar los ejecutables tanto del servicio interno como de la aplicación principal. 
+
+Lo primero sería instalar java8. Se abre la terminal y se escribe el siguiente comando en ella:
+
+apt-get update && apt-get openjdk-8-jre
+
+Con este comando ya se instalaría lo necesario de Java. A continuación habra que instalarse mysql. Requiere varios pasos, el primero es poner el siguiente comando en consola:
+
+apt-get update && apt-get install mysql-server
+
+Después, habra que configurar mysql para que funcione para nuestros ejecutables. Para ello lo primero es escribir el siguiente mandato:
+
+sudo mysql_secure_installation
+
+Una vez realizado, pasamos a establecer contraseña del usuario 'root' usando el comnado:
+
+sudo mysql -u root
+
+Si el comando anterior da error, hay que poner el siguiente comando:
+
+sudo mysql -u root -p
+
+A continuación, para cualquiera de los dos casos anteriores, te pedira la contraseña de usuario del SO y entrará en la consola del mysql, y desde ahí ya se podra modificar usuario y contraseña. Para ello se usará este comando:
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
+
+Para el comando anterior cabe mencionar que la PASSWORD tiene que ser la misma que se tiene puesta en el properties del proyecto del STS, ya que con el comando "ALTER USER" se puede cambiar la contraseña por defecto de 'root'. Luego hay que hacer los cambios efectivos mediante:
+
+FLUSH PRIVILEGES;
+
+Por último, creamos la base de datos con el mismo nombre que se tiene en el properties en la aplicacion en el STS. Nosotroes llamamos al esquema de mysql "test", por lo que nuestro comando sería:
+
+create database test;
+
+Y para acabar del todo, ponemos el comando
+
+exit
+
+para cerrar mysql y acabar el proceso.
+
+Una vez se tengan los ejecutables tanto de la aplicación principal como de el servicio interno en la maquina virtual, simplemente hay que acceder con una terminal por proyecto al directorio en el que se encuentren y ejecutarlos mediante el comando:
+
+java -jar NombreAplicacion-0.0.1-SNAPSHOT.jar
+
+java -jar ServicioInterno-0.0.1-SNAPSHOT.jar
+
+Si todo va bien, se iniciarán ambas aplicaciones, y poniendo la url con el puerto adecuado en cualquier browser la aplicación ya funcionará correctamente.
+
+
+
