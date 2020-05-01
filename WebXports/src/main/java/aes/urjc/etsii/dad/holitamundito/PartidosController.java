@@ -1,9 +1,7 @@
 package aes.urjc.etsii.dad.holitamundito;
 
-import java.util.ArrayList;
 import java.util.Optional;
 
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -33,7 +29,7 @@ public class PartidosController {
 	
 	private RestTemplate restTemplate = new RestTemplate();
 	
-	private final String PARTIDOS_URL = "http://localhost:8082/CrearPartidos";
+	private final String PARTIDOS_URL = "http://si:8082/CrearPartidos";
 	
 	
 	@GetMapping("/Partidos")

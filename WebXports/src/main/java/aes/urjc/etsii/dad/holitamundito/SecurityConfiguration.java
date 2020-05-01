@@ -37,8 +37,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 	 http.authorizeRequests().antMatchers("/Plantillas").permitAll();
 	 http.authorizeRequests().antMatchers("/Partidos").permitAll();
 	 // Private pages (all other pages)
-	// http.authorizeRequests().antMatchers("/Usuario").hasAnyRole("USER");
-	 //http.authorizeRequests().antMatchers("/index2").hasAnyRole("USER,ADMIN");
 	 http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
 	 http.authorizeRequests().antMatchers("/home").hasAnyRole("USER");  //("USER","ADMIN");
 	 http.authorizeRequests().antMatchers("/PlantillasUser").hasAnyRole("USER","ADMIN");

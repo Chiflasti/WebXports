@@ -36,9 +36,8 @@ public class PlantillaController {
 	@Autowired
 	private UsuarioRepository repositoryuser;
 	
-	
-	
-	/*@PostConstruct
+	/*
+	@PostConstruct
 	public void init() {
 		Equipos Movistar_Titans = new Equipos("Movistar Titans", "Malaga", "Equipo de una universidad de Malaga, acaban de subir de division");
 		repositoryeq.save(Movistar_Titans);
@@ -108,6 +107,7 @@ public class PlantillaController {
 		repositorypar.save(p1);
 		
 	}*/
+	
 	@GetMapping("/Plantillas")
 	public String Plantilla(Model model) {
 		model.addAttribute("plantillas", repository.findAll());

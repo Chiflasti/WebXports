@@ -1,20 +1,11 @@
 package aes.urjc.etsii.dad.holitamundito;
 
-import java.util.ArrayList;
-import java.util.Optional;
-
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 
 @Controller
@@ -25,19 +16,19 @@ public class WebController {
 	
 	
 	
-	@GetMapping("/login")
+	@RequestMapping("/login")
 	public String Login() {
-		return "login";
+		return "Login";
 	}
 
 	
-	@GetMapping("/loginerror")
+	@RequestMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
 	
 	
-    @GetMapping("/home")
+	@RequestMapping("/home")
     public String home(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
     	
@@ -49,7 +40,7 @@ public class WebController {
     	return "home";
     }
     
-    @GetMapping("/Gestion")
+	@RequestMapping("/Gestion")
     public String Gestion(Model model, HttpServletRequest request) {
     	Usuario user = userRepository.findByName(request.getUserPrincipal().getName());
     	
@@ -79,9 +70,9 @@ public class WebController {
 
 	}*/
     
-    @GetMapping("/admin")
+	/*@RequestMapping("/admin")
     public String admin() {
     	return "admin";
-    }
+    }*/
 
 }
