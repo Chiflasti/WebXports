@@ -15,6 +15,8 @@ public class DatabaseUsersLoader {
    @PostConstruct
     private void initDatabase() {
     	
+	   	userRepository.save(new Usuario("admin", "adminpass", "ADMIN", "admin@gmail.com"));
+	   	userRepository.save(new Usuario("user", "pass", "USER", "user@gmail.com"));
     	userRepository.save(new Usuario("Starky", "pass", "USER", "WebXportsDAD@gmail.com"));
     	userRepository.save(new Usuario("Hutch", "pass", "USER", "dadwebxports@gmail.com"));
 		userRepository.save(new Usuario("KamiSama", "adminpass", "ADMIN", "kalilinux6669@gmail.com"));

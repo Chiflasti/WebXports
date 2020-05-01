@@ -21,9 +21,7 @@ public class Usuario {
 	private Long id;
 
 	private String name;
-
 	private String passwordHash;
-	
 	private String mail;
 
 	@ElementCollection(fetch = FetchType.EAGER)
