@@ -81,8 +81,8 @@ public class PartidosController {
 	}
 	
 	@PostMapping(value = "/EliminarPartidos")
-	public String eliminarPartidos(Model model, @RequestParam long idPartido){
-		Optional<Partidos> partidos = repositorypar.findById(idPartido);
+	public String eliminarPartidos(Model model, @RequestParam String fecha){
+		Optional<Partidos> partidos = repositorypar.findByFecha(fecha);
 
 		if(partidos.isPresent()) {
 			repositorypar.delete(partidos.get());

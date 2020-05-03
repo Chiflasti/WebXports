@@ -62,16 +62,12 @@ public class EquiposController {
 	}
 	
 	@PostMapping(value = "/EliminarEquipo")
-	public String eliminarEquipo(Model model, @RequestParam long idEq){
-		Optional<Equipos> equipos = repositoryeq.findById(idEq);
+	public String eliminarEquipo(Model model, @RequestParam String nombre){
+		Optional<Equipos> equipos = repositoryeq.findByNombre(nombre);
 
 		if(equipos.isPresent()) {
-			if(idEq <= 0) {
-				return "CascadeNo";
-			}else {
 			repositoryeq.delete(equipos.get());
 			return "EquipoEliminado";
-			}
 		}else {
 			return "EquipoNoExiste";
 		}

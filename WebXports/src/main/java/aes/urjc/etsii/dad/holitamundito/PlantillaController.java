@@ -127,8 +127,8 @@ public class PlantillaController {
 	}
 	
 	@PostMapping(value = "/EliminarPlantilla")
-	public String eliminarPlantilla(Model model, @RequestParam long idPl){
-		Optional<Plantilla> plantilla = repository.findById(idPl);
+	public String eliminarPlantilla(Model model, @RequestParam String nickname){
+		Optional<Plantilla> plantilla = repository.findByNickname(nickname);
 
 		if(plantilla.isPresent()) {
 			repository.delete(plantilla.get());

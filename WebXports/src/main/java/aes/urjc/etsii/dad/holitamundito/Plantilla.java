@@ -15,8 +15,8 @@ public class Plantilla {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idPl;
 	
-	private String NickName;
-	private String Nombre;
+	private String nickname;
+	private String nombre;
 	private String Apellido;
 	private String Posicion;
 	private String Nacionalidad;
@@ -31,8 +31,8 @@ public class Plantilla {
 	public Plantilla(String nickName, String nombre, String apellido, String posicion, String nacionalidad,
 			Equipos equipo, String equip) {
 		super();
-		NickName = nickName;
-		Nombre = nombre;
+		nickname = nickName;
+		nombre = nombre;
 		Apellido = apellido;
 		Posicion = posicion;
 		Nacionalidad = nacionalidad;
@@ -59,19 +59,19 @@ public class Plantilla {
 	}
 
 	public String getNickName() {
-		return NickName;
+		return nickname;
 	}
 
-	public void setNickName(String nickName) {
-		NickName = nickName;
+	public void setNickName(String nickname) {
+		nickname = nickname;
 	}
 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		nombre = nombre;
 	}
 
 	public String getApellido() {

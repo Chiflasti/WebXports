@@ -63,8 +63,8 @@ public class NoticiaController {
 	}
 	
 	@PostMapping(value = "/EliminarNoticia")
-	public String eliminarNoticia(Model model, @RequestParam long id){
-		Optional<Noticia> noticia = repositorynot.findById(id);
+	public String eliminarNoticia(Model model, @RequestParam String dia){
+		Optional<Noticia> noticia = repositorynot.findByDia(dia);
 
 		if(noticia.isPresent()) {
 			repositorynot.delete(noticia.get());
