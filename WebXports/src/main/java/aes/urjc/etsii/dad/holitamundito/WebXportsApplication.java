@@ -20,8 +20,8 @@ public class WebXportsApplication {
 	 public Config config() {
 	 Config config = new Config();
 	 JoinConfig joinConfig = config.getNetworkConfig().getJoin();
-	 joinConfig.getMulticastConfig().setEnabled(false);
-	 joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
+	 //Lo ponemos a true para que funcione con contenedores Docker
+	 joinConfig.getMulticastConfig().setEnabled(true);
 	 return config;
 	 }
 
