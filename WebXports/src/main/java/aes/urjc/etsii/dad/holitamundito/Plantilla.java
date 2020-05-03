@@ -17,38 +17,32 @@ public class Plantilla {
 	
 	private String nickname;
 	private String nombre;
-	private String Apellido;
-	private String Posicion;
-	private String Nacionalidad;
-	private String Equip;
+	private String apellido;
+	private String posicion;
+	private String nacionalidad;
+	private String equip;
 	
 	@ManyToOne
 	//@JoinColumn(name="Nombre")
 	private Equipos Equipo;
 	
 	public Plantilla() {}
+	
+	
 
-	public Plantilla(String nickName, String nombre, String apellido, String posicion, String nacionalidad,
-			Equipos equipo, String equip) {
-		super();
-		nickname = nickName;
-		nombre = nombre;
-		Apellido = apellido;
-		Posicion = posicion;
-		Nacionalidad = nacionalidad;
+	public Plantilla( String nickname, String nombre, String apellido, String posicion, String nacionalidad,
+			Equipos equipo,String equip) {
+		
+		this.nickname = nickname;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.posicion = posicion;
+		this.nacionalidad = nacionalidad;
+		this.equip = equip;
 		Equipo = equipo;
-		Equip = equip; 
 	}
 
-	
-	
-	public String getEquip() {
-		return Equip;
-	}
 
-	public void setEquip(String equip) {
-		Equip = equip;
-	}
 
 	public long getIdPl() {
 		return idPl;
@@ -58,12 +52,12 @@ public class Plantilla {
 		this.idPl = idPl;
 	}
 
-	public String getNickName() {
+	public String getNickname() {
 		return nickname;
 	}
 
-	public void setNickName(String nickname) {
-		nickname = nickname;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 
 	public String getNombre() {
@@ -71,31 +65,39 @@ public class Plantilla {
 	}
 
 	public void setNombre(String nombre) {
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 
 	public String getApellido() {
-		return Apellido;
+		return apellido;
 	}
 
 	public void setApellido(String apellido) {
-		Apellido = apellido;
+		this.apellido = apellido;
 	}
 
 	public String getPosicion() {
-		return Posicion;
+		return posicion;
 	}
 
 	public void setPosicion(String posicion) {
-		Posicion = posicion;
+		this.posicion = posicion;
 	}
 
 	public String getNacionalidad() {
-		return Nacionalidad;
+		return nacionalidad;
 	}
 
 	public void setNacionalidad(String nacionalidad) {
-		Nacionalidad = nacionalidad;
+		this.nacionalidad = nacionalidad;
+	}
+
+	public String getEquip() {
+		return equip;
+	}
+
+	public void setEquip(String equip) {
+		this.equip = equip;
 	}
 
 	public Equipos getEquipo() {
@@ -105,5 +107,7 @@ public class Plantilla {
 	public void setEquipo(Equipos equipo) {
 		Equipo = equipo;
 	}
-
+	
+	
+	
 }
