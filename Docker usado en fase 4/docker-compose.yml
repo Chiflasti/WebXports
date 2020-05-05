@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  web:
+    image: openjdk:8-alpine
+    volumes:
+      - "./WebXports-0.0.1-SNAPSHOT.jar:/tmp/servidor.jar"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/test
+    command: "java -jar /tmp/servidor.jar"
+    expose:
+      - "8443"
+    links:
+      - db
+      - si
+  web2:
+    image: openjdk:8-alpine
+    volumes:
+      - "./WebXports-0.0.1-SNAPSHOT.jar:/tmp/servidor.jar"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/test
+    command: "java -jar /tmp/servidor.jar"
+    expose:
+      - "8443"
+    links:
+      - db
+      - si
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=test
+  lb:
+    image: haproxy
+    volumes:
+      - "./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+    restart: unless-stopped
+    links:
+      - web
+      - web2
+    ports:
+      - "1937:1937"
+      - "443:443"
+  si:
+    image: openjdk:8-alpine
+    volumes:
+      - "./serviciointerno/Servicio_Interno-0.0.1-SNAPSHOT.jar:/tmp/servidor.jar"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/test
+    command: "java -jar /tmp/servidor.jar"
+    expose:
+      - "8082"
+    links:
+      - db
