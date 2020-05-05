@@ -330,5 +330,20 @@ java -jar ServicioInterno-0.0.1-SNAPSHOT.jar
 
 Si todo va bien, se iniciarán ambas aplicaciones, y poniendo la url con el puerto adecuado en cualquier browser la aplicación ya funcionará correctamente.
 
+# Fase 4
 
+**Diagrama UML Fase 4**
 
+![img](https://github.com/Chiflasti/WebXports/blob/master/WebXports/src/main/java/aes/urjc/etsii/dad/holitamundito/UML_fase4_WebXports.jpg)
+
+**Diagrama contenedores docker Fase 4**
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Diagrama_Contendores_Docker.JPG)
+
+**Diagrama servicio interno Fase 4**
+
+![img](https://github.com/Chiflasti/WebXports/blob/master/Servicio_Interno/src/main/java/es/urjc/etsii/dadAplicacion/Diagrama_si_reescalado.JPG)
+
+**Vídeo explicando la aplicación al finalizar la Fase 4**
+
+https://www.youtube.com/watch?v=Q33qqlyyCGA&t=253s
